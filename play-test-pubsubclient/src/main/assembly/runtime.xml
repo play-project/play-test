@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<dependencySets>
+		<dependencySet>
+			<!-- force lib names, to avoid "artifact-version-date.jar" name for snapshot 
+				libraries -->
+			<!--<outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping> -->
+			<excludes>
+				<!-- Junit, even with the scope 'test' this dependency must be excluded, 
+					maybe a bug? -->
+				<exclude>junit:junit</exclude>
+			</excludes>
+			<outputDirectory>/bin</outputDirectory>
+		</dependencySet>
+	</dependencySets>
+
+	<fileSets>
+		<fileSet>
+			<directory>target</directory>
+			<outputDirectory>/bin</outputDirectory>
+			<includes>
+				<include>pubsub.jar</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>src/main/resources/scripts/</directory>
+			<outputDirectory>/bin</outputDirectory>
+			<fileMode>755</fileMode>
+		</fileSet>
+	</fileSets>
+</component>
