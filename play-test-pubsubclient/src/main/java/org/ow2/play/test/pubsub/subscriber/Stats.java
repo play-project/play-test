@@ -27,5 +27,8 @@ public class Stats {
     public synchronized void request(Notify notify) {
         nb++;
     }
+    public synchronized void request() {
+        nb++;
+    }
 
 }

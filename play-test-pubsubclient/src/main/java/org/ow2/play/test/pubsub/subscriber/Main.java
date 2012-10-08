@@ -4,15 +4,22 @@
 package org.ow2.play.test.pubsub.subscriber;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Date;
+import java.util.Iterator;
 
-import javax.xml.namespace.QName;
+import org.event_processing.events.types.Event;
+import org.ontoware.rdf2go.model.Model;
+import org.ontoware.rdf2go.model.Statement;
+import org.ontoware.rdf2go.model.node.Variable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import jline.console.ConsoleReader;
+import com.ebmwebsourcing.wsstar.wsnb.services.INotificationConsumer;
+
+import eu.play_project.play_commons.constants.Constants;
 
 /**
  * @author chamerling
+ * @author stuehmer
  * 
  */
 public class Main {
@@ -21,15 +28,22 @@ public class Main {
 
     static boolean started = false;
 
-    /**
-     * args[0] = local IP args[1] = local (free) port args[2] = provider URL
-     * args[3] = Topic name args[4] = Topic URL args[5] = Topic Prefix
+    /** Seconds to wait for all events to come in */
+	private static int waitForResults = 120;
+
+	
+
+	/**
+     * args[0] = local IP, args[1] = local (free) port,
+     * args[2] = simulation name e.g. p1s1
      * 
      * @param args
      */
     public static void main(String[] args) throws IOException {
 
-        if (args == null || args.length < 6) {
+    	Logger logger = LoggerFactory.getLogger(Main.class);
+    	
+        if (args == null || args.length < 3) {
             System.err.println("!!! Bad number of arguments");
             usage();
             System.exit(-1);
@@ -40,61 +54,96 @@ public class Main {
 
         String me = "http://" + host + ":" + port + "/pubsubcli/Service";
 
-        String provider = args[2];
-        QName topic = new QName(args[4], args[3], args[5]);
-
-        ConsoleReader reader = new ConsoleReader();
-        reader.setPrompt("> ");
-
-        String line;
-        PrintWriter out = new PrintWriter(reader.getOutput());
-
-        while ((line = reader.readLine()) != null) {
-            if (line.equals("start")) {
-                if (started) {
-                    out.println("Already started!");
-                } else {
-                    start(out, me, provider, topic);
-                    started = true;
-                }
-            } else if (line.equals("stop")) {
-                if (!started) {
-                    out.println("Start it before stopping!");
-                } else {
-                    stop();
-                    started = false;
-                }
-            } else if (line.equals("i") || line.equals("info")) {
-                out.println("Configuration:");
-                out.println(" - Local : " + me);
-                out.println(" - Remote : " + provider);
-                out.println(" - Topic : " + topic);
-                out.println("Statistics:");
-                out.println(" - Nb requests : " + Stats.get().nb);
-                out.println(" - Start time : " + new Date(Stats.get().startTime));
-            } else if (line.equals("quit")) {
-                out.println("Exiting...");
-                if (started) stop();
-                break;
-            }
+        String provider = Constants.getProperties().getProperty("dsb.subscribe.endpoint");
+        String simulationName = args[2];
+        
+        if (simulationName.equals("t1p1s1")) {
+            pubSubClientServer = new PubSubClientServer(System.out, T1P1S1Consumer.topic, provider, me);
+           	Runnable notifier = new T1P1S1Notifier();
+           	INotificationConsumer consumer = new T1P1S1Consumer(pubSubClientServer);
+         	pubSubClientServer.start(consumer);
+           	pubSubClientServer.simulate(notifier);
+           	try {
+				Thread.sleep(waitForResults * 1000);
+			} catch (InterruptedException e) {
+			}
+           	pubSubClientServer.stop();
+           	if (Stats.get().nb == 200) {
+           		logger.info("TEST {} true", simulationName);
+           	}
+           	else if (Stats.get().nb < 200){
+           		logger.info("TEST {} false received_less_than_200_complex_events", simulationName);
+           	}
+           	else {
+           		logger.info("TEST {} false received_more_than_200_complex_events", simulationName);
+           	}
         }
+        else if (simulationName.equals("t1p1s2")) {
+        	pubSubClientServer = new PubSubClientServer(System.out, T1P1S2Consumer.topic, provider, me);
+       		Runnable notifier = new T1P1S2Notifier();
+       		INotificationConsumer consumer = new T1P1S2Consumer(pubSubClientServer);
+     		pubSubClientServer.start(consumer);
+       		pubSubClientServer.simulate(notifier);
+           	try {
+				Thread.sleep(waitForResults * 1000);
+			} catch (InterruptedException e) {
+			}
+           	pubSubClientServer.stop();
+           	if (Stats.get().nb == 30) {
+           		logger.info("TEST {} true", simulationName);
+           	}
+           	else if (Stats.get().nb < 30){
+           		logger.info("TEST {} false received_less_than_30_complex_events", simulationName);
+           	}
+           	else {
+           		logger.info("TEST {} false received_more_than_30_complex_events", simulationName);
+           	}
+        }
+        else if (simulationName.equals("t1p2s1")) {
+        	pubSubClientServer = new PubSubClientServer(System.out, T1P2S1Consumer.topic, provider, me);
+       		Runnable notifier = new T1P2S1Notifier();
+       		INotificationConsumer consumer = new T1P2S1Consumer(pubSubClientServer);
+     		pubSubClientServer.start(consumer);
+       		pubSubClientServer.simulate(notifier);
+           	try {
+				Thread.sleep(waitForResults * 1000);
+			} catch (InterruptedException e) {
+			}
+           	pubSubClientServer.stop();
+           	if (Stats.get().nb == 30) {
+           		logger.info("TEST {} true", simulationName);
+           	}
+           	else if (Stats.get().nb < 30){
+           		logger.info("TEST {} false received_less_than_30_complex_events", simulationName);
+           	}
+           	else {
+           		logger.info("TEST {} false received_more_than_30_complex_events", simulationName);
+           	}           	
+        }  
+        else {
+        	usage();
+        }
+        
+        System.exit(0);
     }
 
     public static final void usage() {
         System.out
-                .println("pubsubcli <local ip> <local port> <provider url> <topic name> <topic ns> <topic prefix>");
+                .println("pubsubcli <simulation name e.g. t1p1s1>");
     }
 
-    private static void start(PrintWriter pw, String me, String provider, QName topic) {
-        if (me != null && provider != null && topic != null) {
-            pubSubClientServer = new PubSubClientServer(pw, topic, provider, me);
-            pubSubClientServer.start();
-        }
-    }
 
-    private static void stop() {
-        if (pubSubClientServer != null)
-            pubSubClientServer.stop();
+    public static String getMembers(Model m) {
+    	String members = "";
+    	Iterator<Statement> i = m.findStatements(Variable.ANY, Event.MEMBERS, Variable.ANY);
+    	while (i.hasNext()) {
+    		String member = i.next().getObject().toString();
+    		int endIndex = member.indexOf(eu.play_project.play_commons.constants.Event.EVENT_ID_SUFFIX);
+    		if (endIndex > 0 ) {
+    			member = member.substring(0, endIndex);
+    		}
+    		members += member + " ";
+    	}
+    	return members;
     }
-
 }
