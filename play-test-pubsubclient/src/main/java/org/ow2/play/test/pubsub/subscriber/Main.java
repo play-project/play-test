@@ -29,7 +29,7 @@ public class Main {
     static boolean started = false;
 
     /** Seconds to wait for all events to come in */
-	private static int waitForResults = 120;
+	private static int waitForResults = 90;
 
 	
 
@@ -138,7 +138,7 @@ public class Main {
     	Iterator<Statement> i = m.findStatements(Variable.ANY, Event.MEMBERS, Variable.ANY);
     	while (i.hasNext()) {
     		String member = i.next().getObject().toString();
-    		int endIndex = member.indexOf(eu.play_project.play_commons.constants.Event.EVENT_ID_SUFFIX);
+    		int endIndex = member.lastIndexOf(eu.play_project.play_commons.constants.Event.EVENT_ID_SUFFIX);
     		if (endIndex > 0 ) {
     			member = member.substring(0, endIndex);
     		}

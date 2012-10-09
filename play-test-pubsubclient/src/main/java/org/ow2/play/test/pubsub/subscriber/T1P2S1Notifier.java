@@ -36,24 +36,25 @@ public class T1P2S1Notifier extends AbstractSender implements Runnable {
 	@Override
 	public void run() {
 		int numberOfEvents = 100;
+		int speedingEvents = 0;
 		
-		for (int i = 0; i < numberOfEvents; i++) {
+		for (int i = 1; i <= numberOfEvents; i++) {
 			Event vesselEvent, proximityEvent;
-			int speedingEvents = 0;
+
 			if(i % 3 == 0 && speedingEvents < 30) {
 				// high speed over 10 kts
-				vesselEvent = getNewVesselEvent("1", 12.5);
-				// close proximity lesse than 5 mi
-				proximityEvent = getNewProximityEvent("1", 4.1);
+				vesselEvent = getNewVesselEvent("1"+i, 12.5);
+				// close proximity less than 5 mi
+				proximityEvent = getNewProximityEvent("1"+i, 4.1);
 				speedingEvents++;
-				System.out.printf("NOTIFIER sending event %s SPEEDING\n", i+1);				
+				System.out.printf("NOTIFIER sending event %s SPEEDING\n", i);				
 			}
 			else {
 				// speed less than 10 kts
-				vesselEvent = getNewVesselEvent("1", 9);
+				vesselEvent = getNewVesselEvent("1"+i, 9);
 				// proximity more than 5 mi
-				proximityEvent = getNewProximityEvent("1", 7);
-				System.out.printf("NOTIFIER sending event %s normal\n", i+1);				
+				proximityEvent = getNewProximityEvent("1"+i, 7);
+				System.out.printf("NOTIFIER sending event %s normal\n", i);				
 			}
 			logger.info("NOTIFIER Exit " + vesselEvent.getModel().getContextURI());
 			this.notify(vesselEvent, Stream.VesselStream.getTopicQName());

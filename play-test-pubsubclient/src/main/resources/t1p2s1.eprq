@@ -6,7 +6,7 @@ PREFIX :       <http://events.event-processing.org/types/>
 
 CONSTRUCT {
     :e rdf:type :VesselHighSpeedWithLowProximity .
-    :e :stream <http://streams.event-processing.org/ids/WHATGOESHERE#stream> .
+    :e :stream <http://streams.event-processing.org/ids/TaxiUCClic2Call#stream> .
 	:e ais:MMSI ?mmsi .
 	:e ais:distance ?distance .
     :e :message "A vessel was detected with high speed > 10 and close proximity <5 to another vessel." .

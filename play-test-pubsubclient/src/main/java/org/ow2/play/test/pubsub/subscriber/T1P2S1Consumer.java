@@ -3,7 +3,6 @@ package org.ow2.play.test.pubsub.subscriber;
 import javax.xml.namespace.QName;
 
 import org.ontoware.rdf2go.model.Model;
-import org.ontoware.rdf2go.model.Syntax;
 import org.ontoware.rdf2go.model.node.Variable;
 import org.ontoware.rdf2go.vocabulary.RDF;
 import org.slf4j.Logger;
@@ -41,13 +40,10 @@ final class T1P2S1Consumer implements INotificationConsumer {
 
 	public void notify(Notify notify) throws WsnbException {
 	    Document dom = Wsnb4ServUtils.getWsnbWriter().writeNotifyAsDOM(notify);
- 
-	     
-	    
+ 	    
 	    Model rdf;
 		try {
 			rdf = rdfParser.parseRdf(dom);
-			System.out.println(rdf.serialize(Syntax.Nquads));
 			
 			if (rdf.contains(Variable.ANY, RDF.type, Variable.ANY)) {
 				logger.info("RECEIVER Entry " + rdf.getContextURI() + " " + Main.getMembers(rdf));
