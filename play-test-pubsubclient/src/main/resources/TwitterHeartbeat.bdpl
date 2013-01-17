@@ -1,0 +1,21 @@
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sioc:    <http://rdfs.org/sioc/ns#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX :        <http://events.event-processing.org/types/>
+
+CONSTRUCT {
+	:e rdf:type :TwitterEvent .
+	:e :stream <http://streams.event-processing.org/ids/TwitterPingPong2#stream>.
+	:e :message "DCEP recieved a PING and is answering with a PONG." .
+	:e :members ?e1 .
+	:e sioc:content "PONG"
+}
+WHERE {
+	EVENT ?id1 {
+		?e3 rdf:type :TwitterEvent .
+		?e3 :stream <http://streams.event-processing.org/ids/TwitterFeed#stream> .
+		?e3 :endTime ?tweetTime .
+		?e3 sioc:content ?tweetContent
+		}
+		FILTER contains(?tweetContent, "PING")
+}
