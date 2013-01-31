@@ -45,7 +45,7 @@
 		<dependency>
 			<groupId>org.ow2.play</groupId>
 			<artifactId>play-commons-eventtypes</artifactId>
-			<version>1.1-SNAPSHOT</version>
+			<version>${project.version}</version>
 			<exclusions>
 				<exclusion>
 					<artifactId>slf4j-log4j12</artifactId>
