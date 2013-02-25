@@ -51,7 +51,7 @@ public class T1P1S1Notifier extends AbstractSender implements Runnable {
 	
 	
 	private static UcTelcoCall getNewCallEvent() {
-		String eventId = EVENTS.getUri() + "testing" + Math.abs(random.nextLong());
+		String eventId = EventHelpers.createRandomEventId("testing");
 		
 		UcTelcoCall event = new UcTelcoCall(EventHelpers.createEmptyModel(eventId),
 				eventId + EVENT_ID_SUFFIX, true);

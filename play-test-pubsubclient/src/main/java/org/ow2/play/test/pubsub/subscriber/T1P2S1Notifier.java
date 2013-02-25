@@ -75,7 +75,7 @@ public class T1P2S1Notifier extends AbstractSender implements Runnable {
 	
 	
 	private static VesselEvent getNewVesselEvent(String mmsi, double speed) {
-		String eventId = EVENTS.getUri() + "testing" + Math.abs(random.nextLong());
+		String eventId = EventHelpers.createRandomEventId("testing");
 		
 		VesselEvent event = new VesselEvent(EventHelpers.createEmptyModel(eventId),
 				eventId + EVENT_ID_SUFFIX, true);
@@ -102,7 +102,7 @@ public class T1P2S1Notifier extends AbstractSender implements Runnable {
 
 
 	private static ProximityInfoEvent getNewProximityEvent(String mmsi, double distance) {
-		String eventId = EVENTS.getUri() + "testing" + Math.abs(random.nextLong());
+		String eventId = EventHelpers.createRandomEventId("testing");
 		
 		ProximityInfoEvent event = new ProximityInfoEvent(EventHelpers.createEmptyModel(eventId),
 				eventId + EVENT_ID_SUFFIX, true);

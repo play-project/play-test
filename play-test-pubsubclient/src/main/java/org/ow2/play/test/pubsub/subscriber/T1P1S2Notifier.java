@@ -1,7 +1,6 @@
 package org.ow2.play.test.pubsub.subscriber;
 
 import static eu.play_project.play_commons.constants.Event.EVENT_ID_SUFFIX;
-import static eu.play_project.play_commons.constants.Namespace.EVENTS;
 
 import java.util.Calendar;
 import java.util.Random;
@@ -62,7 +61,7 @@ public class T1P1S2Notifier extends AbstractSender implements Runnable {
 	
 	
 	private static UcTelcoCall getNewCallEvent(String calleeNumber) {
-		String eventId = EVENTS.getUri() + "testing" + Math.abs(random.nextLong());
+		String eventId = EventHelpers.createRandomEventId("testing");
 		
 		UcTelcoCall event = new UcTelcoCall(EventHelpers.createEmptyModel(eventId),
 				eventId + EVENT_ID_SUFFIX, true);
