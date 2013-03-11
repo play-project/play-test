@@ -1,0 +1,1578 @@
+@prefix om-owl:  <http://knoesis.wright.edu/ssw/ont/sensor-observation.owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sens-obs:  <http://knoesis.wright.edu/ssw/> .
+@prefix owl-time:  <http://www.w3.org/2006/time#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix weather:  <http://knoesis.wright.edu/ssw/ont/weather.owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_17_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_17_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_17_30_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_3_31_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_3_31_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_3_31_00 .
+
+sens-obs:Instant_2009_9_20_23_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T23:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_21_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_21_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_21_00_00 .
+
+sens-obs:Instant_2009_9_20_6_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T06:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_23_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_23_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_23_30_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_3_46_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_3_46_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_3_46_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_21_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_17_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_20_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_16_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T16:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_6_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_16_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T16:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_19_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_19_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_19_00_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_15_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_3_46_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_5_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_1_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_1_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_1_00_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_1_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_6_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_23_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_23_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_23_45_00 .
+
+sens-obs:Instant_2009_9_20_10_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T10:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_10_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_10_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_10_45_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_6_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_6_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_6_15_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_1_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_1_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_1_45_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_17_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_1_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T01:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_0_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_0_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_0_45_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_11_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_14_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_14_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_14_30_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_7_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_6_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_18_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T18:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_3_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_3_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_3_00_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_10_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_10_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_10_30_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_6_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_17_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_17_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_17_45_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_1_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_1_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_1_30_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_5_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_5_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_5_00_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_21_0_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_12_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T12:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_2_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_14_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T14:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_6_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_6_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_6_30_00 .
+
+sens-obs:Instant_2009_9_20_13_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T13:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_17_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T17:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_4_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_4_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_4_45_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_23_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_0_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T00:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_18_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_21_0_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-21T00:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_9_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_9_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_9_45_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_2_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_14_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_14_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_14_15_00 .
+
+sens-obs:Instant_2009_9_20_0_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T00:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_14_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_16_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_2_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_22_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_3_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_10_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_2_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_2_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_2_00_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_22_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_2_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_2_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_2_15_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_14_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_14_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_14_45_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_18_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_12_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_12_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_12_15_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_4_01_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_16_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_16_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_16_30_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_10_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_10_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_10_00_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_16_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_16_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_16_15_00 .
+
+sens-obs:Instant_2009_9_20_13_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T13:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_22_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_22_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_22_15_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_14_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_20_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_20_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_20_00_00 .
+
+sens-obs:Instant_2009_9_20_3_31_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T03:31:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_12_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_5_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T05:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_9_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T09:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_2_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_2_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_2_30_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_22_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_20_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_23_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_16_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_23_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_4_01_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T04:01:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_21_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T21:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_4_16_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_4_16_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_4_16_00 .
+
+sens-obs:Instant_2009_9_20_4_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T04:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_16_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_14_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_21_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T21:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_17_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_5_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T05:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_17_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_17_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_17_15_00 .
+
+sens-obs:Instant_2009_9_20_22_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T22:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_16_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_16_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_16_45_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_15_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_15_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_15_00_00 .
+
+sens-obs:Instant_2009_9_20_4_16_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T04:16:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_12_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_12_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_12_30_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_7_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_7_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_7_15_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_22_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_22_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_22_00_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_19_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_19_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_19_30_00 .
+
+sens-obs:Instant_2009_9_20_11_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T11:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_18_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_3_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T03:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_0_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_18_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_12_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_17_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T17:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_4_16_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_6_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T06:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_10_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_0_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_0_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_0_30_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_19_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_19_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_19_45_00 .
+
+sens-obs:Instant_2009_9_20_2_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T02:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_11_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_2_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T02:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_16_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_1_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_21_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T21:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_21_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_21_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_21_30_00 .
+
+sens-obs:Instant_2009_9_20_20_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T20:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_13_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_18_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_18_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_18_45_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_18_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_18_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_18_00_00 .
+
+sens-obs:Instant_2009_9_20_19_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T19:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_15_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T15:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_19_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T19:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_19_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_19_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_19_15_00 .
+
+sens-obs:Instant_2009_9_20_20_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T20:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_11_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_11_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_11_30_00 .
+
+sens-obs:Instant_2009_9_20_20_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T20:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_15_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_17_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_17_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_17_00_00 .
+
+sens-obs:Instant_2009_9_20_20_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T20:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_23_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T23:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_22_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T22:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_20_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_20_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_20_15_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_7_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_7_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_7_00_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_23_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_23_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_23_00_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_10_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_12_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_18_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T18:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_13_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_13_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_13_30_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_13_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_13_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_13_45_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_15_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_20_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_17_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T17:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_10_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T10:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_2_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_15_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_15_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_15_15_00 .
+
+sens-obs:Instant_2009_9_20_6_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T06:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_11_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_11_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_11_15_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_14_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_7_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T07:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_9_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_9_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_9_30_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_13_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_18_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T18:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_2_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_2_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_2_45_00 .
+
+sens-obs:Instant_2009_9_20_6_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T06:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_22_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_12_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T12:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_13_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_13_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_13_00_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_21_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_1_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T01:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_18_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_18_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_18_15_00 .
+
+sens-obs:Instant_2009_9_20_3_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T03:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_18_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_18_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_18_30_00 .
+
+sens-obs:Instant_2009_9_20_2_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T02:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_17_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_21_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_12_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T12:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_1_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_1_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_1_15_00 .
+
+sens-obs:Instant_2009_9_20_1_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T01:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_15_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T15:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_21_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_21_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_21_15_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_6_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_6_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_6_45_00 .
+
+sens-obs:Instant_2009_9_20_2_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T02:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_11_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T11:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_5_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_0_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_11_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T11:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_11_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T11:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_4_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_9_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_11_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_11_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_11_45_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_19_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_9_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_3_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_3_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_3_15_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_20_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_10_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_15_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_15_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_15_30_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_15_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_20_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_20_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_20_30_00 .
+
+sens-obs:Instant_2009_9_20_10_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T10:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_14_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T14:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_16_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_16_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_16_00_00 .
+
+sens-obs:Instant_2009_9_20_16_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T16:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_21_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_21_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_21_45_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_13_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_13_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_13_15_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_20_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_20_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_20_45_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_19_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_1_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_13_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_12_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_12_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_12_45_00 .
+
+sens-obs:Instant_2009_9_20_23_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T23:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_12_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T12:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_21_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T21:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_12_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_12_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_12_00_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_11_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_11_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_11_00_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_21_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_13_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T13:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_22_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_22_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_22_30_00 .
+
+sens-obs:Instant_2009_9_20_14_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T14:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_13_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_23_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_23_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_23_15_00 .
+
+sens-obs:Instant_2009_9_20_9_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T09:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_5_30_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_5_30_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_5_30_00 .
+
+sens-obs:Instant_2009_9_20_18_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T18:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_3_31_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_11_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_10_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T10:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_5_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_0_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_0_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_0_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_0_15_00 .
+
+sens-obs:Instant_2009_9_20_16_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T16:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_5_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_5_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_5_15_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_7_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_5_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T05:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_15_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_15_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_15_45_00 .
+
+sens-obs:Instant_2009_9_20_0_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T00:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_14_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T14:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_3_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_6_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_6_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_6_00_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_4_01_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_4_01_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_4_01_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_22_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_22_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_22_45_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_23_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_15_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T15:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_19_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T19:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_17_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T17:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_1_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_5_45_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_5_45_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_5_45_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_5_30_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_5_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T05:00:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_19_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_22_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T22:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_22_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T22:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_7_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T07:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_12_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_11_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_20_3_46_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T03:46:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_15_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T15:15:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_23_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T23:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_19_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T19:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_19_45_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "7.77"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_21_0_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_21_0_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_21_0_00_00 .
+
+sens-obs:System_DYNT2
+      om-owl:generatedObservation
+              sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_17_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_20_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_3_31_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_2_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_12_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_21_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_23_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_12_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_15_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_3_46_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_11_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_4_16_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_11_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_22_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_23_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_17_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_19_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_16_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_5_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_15_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_1_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_7_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_12_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_9_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_23_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_22_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_6_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_10_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_0_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_19_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_2_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_1_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_5_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_0_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_14_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_15_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_13_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_3_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_18_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_10_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_17_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_19_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_0_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_18_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_5_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_1_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_6_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_1_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_6_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_21_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_4_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_21_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_6_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_4_01_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_18_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_18_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_22_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_9_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_19_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_14_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_11_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_5_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_17_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_11_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_3_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_2_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_20_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_7_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_2_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_23_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_14_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_15_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_20_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_12_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_13_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_16_30_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_16_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_21_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_10_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_16_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_13_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_13_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_20_45_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_21_0_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_22_15_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_14_00_00 , sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_10_15_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_14_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_14_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_14_00_00 .
+
+sens-obs:Instant_2009_9_20_13_45_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T13:45:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_20_1_30_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-20T01:30:00-05:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_DYNT2_2009_9_20_10_15_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_DYNT2 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_DYNT2_2009_9_20_10_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_20_10_15_00 .

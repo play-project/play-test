@@ -15,7 +15,8 @@
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<modules>
-		<module>play-test-pubsubclient</module>
+		<module>play-test-centralized-integration</module>
+		<module>play-test-srbench-simulator</module>
 		<module>play-test-notifyclient</module>
 	</modules>
 	<build>

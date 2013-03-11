@@ -1,0 +1,1644 @@
+@prefix om-owl:  <http://knoesis.wright.edu/ssw/ont/sensor-observation.owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sens-obs:  <http://knoesis.wright.edu/ssw/> .
+@prefix owl-time:  <http://www.w3.org/2006/time#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix weather:  <http://knoesis.wright.edu/ssw/ont/weather.owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_6_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_19_0_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_20_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_20_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_20_00_00 .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_18_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_18_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_18_00_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_9_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_9_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_9_00_00 .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_9_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_5_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_5_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_5_00_00 .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_22_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_22_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_22_00_00 .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_4_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_4_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_4_00_00 .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_19_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_19_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_19_00_00 .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_22_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_6_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_6_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_6_00_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_12_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.6"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_20_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Instant_2009_9_18_17_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T17:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_8_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_8_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_8_00_00 .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_2_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_2_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_2_00_00 .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_15_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_15_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_15_00_00 .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_5_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "50.5"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_3_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "51.4"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_17_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.4"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_19_0_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "54.5"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_11_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.8"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_21_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_21_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_21_00_00 .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_16_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_16_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_16_00_00 .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_14_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_14_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_14_00_00 .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_2_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_2_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_2_00_00 .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_7_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_7_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_7_00_00 .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_4_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_10_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_10_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_10_00_00 .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_1_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_1_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_1_00_00 .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_19_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_19_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_19_00_00 .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_12_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_12_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_12_00_00 .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_7_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Instant_2009_9_18_14_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T14:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_18_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_18_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_18_00_00 .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_15_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.4"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_9_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_9_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_9_00_00 .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_18_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_18_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_18_00_00 .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_23_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_23_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_23_00_00 .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_17_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_17_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_17_00_00 .
+
+sens-obs:Instant_2009_9_18_9_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T09:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_23_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_4_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "51.4"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_11_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Instant_2009_9_18_19_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T19:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_17_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_17_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_17_00_00 .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_14_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_10_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_10_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_10_00_00 .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_6_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_6_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_6_00_00 .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_10_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_8_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_8_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_8_00_00 .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_8_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_8_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_8_00_00 .
+
+sens-obs:Instant_2009_9_18_3_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T03:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_16_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_1_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "53.4"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:Instant_2009_9_18_21_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T21:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_18_8_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T08:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_23_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_23_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_23_00_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_21_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.7"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_2_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_1_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_1_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_1_00_00 .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_23_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_23_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_23_00_00 .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_4_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_13_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.3"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_18_1_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T01:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_15_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.2"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_21_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_21_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_21_00_00 .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_22_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_22_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_22_00_00 .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_19_0_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_9_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_9_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_9_00_00 .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_12_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_12_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_12_00_00 .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_1_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_19_0_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_19_0_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_19_0_00_00 .
+
+sens-obs:Instant_2009_9_18_10_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T10:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_2_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_2_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_2_00_00 .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_14_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_14_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_14_00_00 .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_11_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_11_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_11_00_00 .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_5_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_8_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_12_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_12_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_12_00_00 .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_7_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_7_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_7_00_00 .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_15_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_15_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_15_00_00 .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_11_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_11_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_11_00_00 .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_21_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.7"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_2_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_2_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_2_00_00 .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_19_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_15_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_3_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_5_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_5_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_5_00_00 .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_22_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_22_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_22_00_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_19_0_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.7"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_17_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_10_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_6_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_3_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_13_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_13_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_13_00_00 .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_18_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.5"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_16_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_16_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_16_00_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_19_0_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_19_0_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_19_0_00_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_5_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_5_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_5_00_00 .
+
+sens-obs:Instant_2009_9_19_0_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-19T00:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_2_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_11_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_11_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_11_00_00 .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_22_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_16_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.4"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_21_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_21_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_21_00_00 .
+
+sens-obs:Instant_2009_9_18_16_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T16:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_14_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_6_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_6_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_6_00_00 .
+
+sens-obs:Instant_2009_9_18_6_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T06:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_20_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_10_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_16_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_19_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_19_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_19_00_00 .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_6_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_23_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.7"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_13_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_13_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_13_00_00 .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_11_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_11_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_11_00_00 .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_8_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_8_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_8_00_00 .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_10_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_10_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_10_00_00 .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_7_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "48.2"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_11_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.8"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_3_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_3_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_3_00_00 .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_19_0_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.7"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_22_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_22_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_22_00_00 .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_20_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_20_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_20_00_00 .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_19_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_13_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_13_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_13_00_00 .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_23_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_23_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_23_00_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_16_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_16_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_16_00_00 .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_17_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_7_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_18_5_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T05:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_3_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_3_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_3_00_00 .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_13_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_13_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_13_00_00 .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_9_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "57.4"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_16_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_16_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_16_00_00 .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_14_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_14_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_14_00_00 .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_19_0_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_19_0_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_19_0_00_00 .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_15_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "68.5"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_17_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.4"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_19_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.6"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_19_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.6"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_20_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.7"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_5_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_5_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_5_00_00 .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_12_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.6"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_21_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_21_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_21_00_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_6_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_16_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.3"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_5_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_5_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_5_00_00 .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_12_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "64.0"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_20_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "57.9"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_7_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_21_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_19_0_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_19_0_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_19_0_00_00 .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_4_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_4_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_4_00_00 .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_5_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_7_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_7_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_7_00_00 .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_4_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_12_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_12_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_12_00_00 .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_3_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_20_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_20_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_20_00_00 .
+
+sens-obs:Instant_2009_9_18_2_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T02:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_8_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_8_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_8_00_00 .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_1_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_1_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_1_00_00 .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_3_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Instant_2009_9_18_4_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T04:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_18_11_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T11:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_2_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "52.3"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_2_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_2_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_2_00_00 .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_17_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "66.4"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_12_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_12_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_12_00_00 .
+
+sens-obs:System_REDO3
+      om-owl:generatedObservation
+              sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_22_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_20_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_20_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_13_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_18_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_9_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_23_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_16_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_22_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_5_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_3_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_4_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_13_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_19_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_6_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_14_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_19_0_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_16_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_5_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_21_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_8_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_2_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_5_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_15_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_19_0_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_4_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_7_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_21_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_12_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_16_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_14_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_2_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_7_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_20_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_10_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_8_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_1_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_1_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_2_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_19_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_12_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_12_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_18_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_10_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_3_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_9_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_18_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_23_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_10_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_17_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_13_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_3_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_6_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_17_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_10_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_6_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_14_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_15_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_8_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_8_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_21_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_17_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_23_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_20_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_1_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_3_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_23_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_1_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_19_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_9_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_21_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_9_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_22_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_7_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_9_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_12_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_19_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_19_0_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_2_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_4_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_14_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_11_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_1_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_15_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_19_0_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_7_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_12_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_15_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_11_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_2_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_4_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_5_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_22_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_6_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_16_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_13_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_16_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_22_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_5_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_19_0_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_18_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_11_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_15_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_21_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_18_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_6_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_4_00_00 , sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_19_00_00 , sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_17_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_20_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_13_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_11_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_8_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_10_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_14_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_11_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_17_00_00 , sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_23_00_00 , sens-obs:Observation_AirTemperature_REDO3_2009_9_18_7_00_00 , sens-obs:Observation_SnowDepth_REDO3_2009_9_18_3_00_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_4_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_8_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "50.7"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_18_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.5"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_15_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_10_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_10_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_10_00_00 .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_3_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_3_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_3_00_00 .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_9_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_10_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_10_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_10_00_00 .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_13_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_13_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_13_00_00 .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_6_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_6_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_6_00_00 .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_3_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_3_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_3_00_00 .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_18_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_22_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "57.0"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_13_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_15_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_15_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_15_00_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_14_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_14_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_14_00_00 .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_21_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_21_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_21_00_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_17_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_17_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_17_00_00 .
+
+sens-obs:Instant_2009_9_18_23_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T23:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_20_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_20_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_20_00_00 .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_23_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.7"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_9_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_2_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_23_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_6_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "50.4"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_3_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_3_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_3_00_00 .
+
+sens-obs:Instant_2009_9_18_22_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T22:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_1_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_1_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_1_00_00 .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_19_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_19_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_19_00_00 .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_10_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_9_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_9_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_9_00_00 .
+
+sens-obs:Instant_2009_9_18_15_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T15:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_9_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_9_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_9_00_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_7_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_7_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_7_00_00 .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_12_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_23_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "56.8"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_13_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.4"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_19_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_19_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_19_00_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_5_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_13_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "67.5"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_14_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.4"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_4_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_4_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_4_00_00 .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_22_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.7"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_15_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_15_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_15_00_00 .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_1_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_1_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_1_00_00 .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_19_0_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_19_0_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_19_0_00_00 .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_8_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_21_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "57.6"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:Instant_2009_9_18_13_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T13:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Instant_2009_9_18_12_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T12:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_18_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "61.7"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_2_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_4_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_4_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_4_00_00 .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_1_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_10_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "60.8"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_14_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "67.6"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_8_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_5_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_8_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_12_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_1_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_6_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_6_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_6_00_00 .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_16_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_16_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_16_00_00 .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_21_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Instant_2009_9_18_20_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T20:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_22_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_22_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_22_00_00 .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_16_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "68.7"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_9_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_1_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_18_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_18_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_18_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_18_00_00 .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_11_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "63.0"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_22_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.7"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_PrecipitationAccumulated_REDO3_2009_9_18_18_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationAccumulated ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_18_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_18_00_00 .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_15_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_15_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_15_00_00 .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_4_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_4_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_4_00_00 .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_7_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "108.0"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_20_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.7"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:MeasureData_PrecipitationAccumulated_REDO3_2009_9_18_14_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "107.2"^^xsd:float ;
+      om-owl:uom weather:centimeters .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_20_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_20_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_20_00_00 .
+
+sens-obs:Observation_PrecipitationSmoothed_REDO3_2009_9_18_17_00_00
+      a       weather:RainfallObservation ;
+      om-owl:observedProperty
+              weather:_PrecipitationSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_PrecipitationSmoothed_REDO3_2009_9_18_17_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_17_00_00 .
+
+sens-obs:Instant_2009_9_18_18_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T18:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_13_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_14_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_14_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_14_00_00 .
+
+sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_19_00_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "58.5"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_11_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_11_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_11_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_11_00_00 .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_17_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_17_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_17_00_00 .
+
+sens-obs:Instant_2009_9_18_7_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T07:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_SnowSmoothed_REDO3_2009_9_18_23_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowSmoothed ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowSmoothed_REDO3_2009_9_18_23_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_23_00_00 .
+
+sens-obs:Observation_AirTemperature_REDO3_2009_9_18_7_00_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_REDO3_2009_9_18_7_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_7_00_00 .
