@@ -31,13 +31,32 @@ public class SrbenchSimulator implements Iterable<Model> {
 			"prefix xsd:     <http://www.w3.org/2001/XMLSchema#> " +
 			"prefix weather:  <http://knoesis.wright.edu/ssw/ont/weather.owl#> " +
 			"prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
+
+	private final String query;
+	private final Logger logger;
+	private final Model m;
 	
-	/**
-	 * Test the iterator by writing all simulated events to stdout.
-	 */
-	public static void main(String[] args) {
-		for (Model m : new SrbenchSimulator()) {
-			m.dump();
+	public SrbenchSimulator() throws SrbenchSimulatorException {
+
+		this.logger = Logger.getLogger(SrbenchSimulator.class);
+		try{
+			m = RDF2Go.getModelFactory().createModel().open();
+			m.readFrom(SrbenchSimulator.class.getClassLoader().getResourceAsStream("KLCK_2009_9_20.n3"), Syntax.Turtle);
+			
+			this.query = sparqlPrefixes + "" +
+					"SELECT ?observation ?data ?instant ?timestamp " +
+					"WHERE { " +
+					"?data rdf:type om-owl:MeasureData . " +
+					"?observation om-owl:result ?data . " +
+					"?observation om-owl:samplingTime ?instant . " +
+					"?instant owl-time:inXSDDateTime ?timestamp . " +
+					"} " +
+					"ORDER BY ?timestamp ";
+			
+		} catch (ModelRuntimeException e) {
+			throw new SrbenchSimulatorException("Error reading simulation data.", e);
+		} catch (IOException e) {
+			throw new SrbenchSimulatorException("Error reading simulation data.", e);
 		}
 	}
 
@@ -48,37 +67,10 @@ public class SrbenchSimulator implements Iterable<Model> {
 	
 	class SrBenchIterator implements Iterator<Model> {
 
-		int i = 0;
-		private String query;
-		private final Logger logger;
-		private ClosableIterator<QueryRow> queryRows;
-		private Model m;
+		private final ClosableIterator<QueryRow> queryRows;
 		
 		public SrBenchIterator() {
-			
-			this.logger = Logger.getLogger(SrbenchSimulator.class);
-			try {
-
-				m = RDF2Go.getModelFactory().createModel().open();
-				m.readFrom(SrbenchSimulator.class.getClassLoader().getResourceAsStream("KLCK_2009_9_20.n3"), Syntax.Turtle);
-				
-				this.query = sparqlPrefixes + "" +
-						"SELECT ?observation ?data ?instant ?timestamp " +
-						"WHERE { " +
-						"?data rdf:type om-owl:MeasureData . " +
-						"?observation om-owl:result ?data . " +
-						"?observation om-owl:samplingTime ?instant . " +
-						"?instant owl-time:inXSDDateTime ?timestamp . " +
-						"} " +
-						"ORDER BY ?timestamp ";
-				
-				queryRows = m.sparqlSelect(query).iterator();
-				
-			} catch (ModelRuntimeException e) {
-				logger.error("Error reading simulation data.", e);
-			} catch (IOException e) {
-				logger.error("Error reading simulation data.", e);
-			}
+			queryRows = m.sparqlSelect(query).iterator();
 		}
 		
 		@Override
