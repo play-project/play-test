@@ -16,6 +16,7 @@ import org.ontoware.rdf2go.model.Statement;
 import org.ontoware.rdf2go.model.Syntax;
 import org.ontoware.rdf2go.model.node.Variable;
 import org.ontoware.rdf2go.model.node.impl.URIImpl;
+import org.ontoware.rdf2go.vocabulary.RDF;
 
 import eu.play_project.play_commons.constants.Namespace;
 import eu.play_project.play_commons.constants.Stream;
@@ -84,11 +85,17 @@ public class SrbenchSimulator implements Iterable<Model> {
 			logger.debug(String.format("obs: %s, data: %s time: %s\n", result.getValue("observation"), result.getValue("data"), result.getValue("timestamp")));
 
 			String eventId = EventHelpers.createRandomEventId("srbech");
-			Event event = new Event(EventHelpers.createEmptyModel(eventId), eventId + EVENT_ID_SUFFIX, true);
+			Event event = new Event(EventHelpers.createEmptyModel(eventId), eventId + EVENT_ID_SUFFIX, false);
+			
+			// Set the event type manually:
+			ClosableIterator<Statement> types = m.findStatements(result.getValue("observation").asResource(), RDF.type, Variable.ANY);
+			event.getModel().addStatement(new URIImpl(eventId + EVENT_ID_SUFFIX), RDF.type, types.next().getObject());
+			types.close();
 
 			// Get timestamp into the event payload:
 			event.setEndTime(result.getValue("timestamp"));
 			event.setStream(new URIImpl(Namespace.STREAMS.getUri() + "Srbench" + Stream.STREAM_ID_SUFFIX));
+			event.setSource(new URIImpl(Namespace.SOURCE.getUri() + this.getClass().getSimpleName()));
 
 			// Link the event to the Observation
 			event.getModel().addStatement(new URIImpl(eventId + EVENT_ID_SUFFIX), new URIImpl(Namespace.TYPES.getUri() + "observation"), result.getValue("observation"));
