@@ -1,0 +1,45 @@
+@prefix om-owl:  <http://knoesis.wright.edu/ssw/ont/sensor-observation.owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sens-obs:  <http://knoesis.wright.edu/ssw/> .
+@prefix owl-time:  <http://www.w3.org/2006/time#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix weather:  <http://knoesis.wright.edu/ssw/ont/weather.owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+sens-obs:MeasureData_WindGust_KLCK_2009_9_19_0_15_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "0.0"^^xsd:float ;
+      om-owl:uom weather:milesPerHour .
+
+sens-obs:Observation_WindGust_KLCK_2009_9_19_0_15_00
+      a       weather:WindSpeedObservation ;
+      om-owl:observedProperty
+              weather:_WindGust ;
+      om-owl:procedure sens-obs:System_KLCK ;
+      om-owl:result sens-obs:MeasureData_WindGust_KLCK_2009_9_19_0_15_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_19_0_15_00 .
+
+sens-obs:Instant_2009_9_19_0_15_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-19T00:15:00-04:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+
+sens-obs:Observation_AirTemperature_KLCK_2009_9_19_18_35_00
+      a       weather:TemperatureObservation ;
+      om-owl:observedProperty
+              weather:_AirTemperature ;
+      om-owl:procedure sens-obs:System_KLCK ;
+      om-owl:result sens-obs:MeasureData_AirTemperature_KLCK_2009_9_19_18_35_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_19_18_35_00 .
+
+sens-obs:MeasureData_AirTemperature_KLCK_2009_9_19_18_35_00
+      a       om-owl:MeasureData ;
+      om-owl:floatValue "77.5"^^xsd:float ;
+      om-owl:uom weather:fahrenheit .
+
+sens-obs:Instant_2009_9_19_18_35_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-19T18:35:00-04:00^^http://www.w3.org/2001/XMLSchema#dateTime" .
+ 

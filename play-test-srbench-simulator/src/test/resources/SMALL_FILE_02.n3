@@ -1,0 +1,25 @@
+@prefix om-owl:  <http://knoesis.wright.edu/ssw/ont/sensor-observation.owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sens-obs:  <http://knoesis.wright.edu/ssw/> .
+@prefix owl-time:  <http://www.w3.org/2006/time#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix weather:  <http://knoesis.wright.edu/ssw/ont/weather.owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_6_00_00
+      a       om-owl:TruthData ;
+      om-owl:booleanValue "true^^http://www.w3.org/2001/XMLSchema#boolean" .
+
+sens-obs:Observation_SnowDepth_REDO3_2009_9_18_6_00_00
+      a       weather:SnowfallObservation ;
+      om-owl:observedProperty
+              weather:_SnowDepth ;
+      om-owl:procedure sens-obs:System_REDO3 ;
+      om-owl:result sens-obs:TruthData_SnowDepth_REDO3_2009_9_18_6_00_00 ;
+      om-owl:samplingTime sens-obs:Instant_2009_9_18_6_00_00 .
+
+sens-obs:Instant_2009_9_18_6_00_00
+      a       owl-time:Instant ;
+      owl-time:inXSDDateTime
+              "2009-09-18T06:00:00-07:00^^http://www.w3.org/2001/XMLSchema#dateTime" .

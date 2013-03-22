@@ -5,7 +5,6 @@ import static eu.play_project.play_commons.constants.Event.EVENT_ID_SUFFIX;
 import java.io.IOException;
 import java.util.Iterator;
 
-import org.apache.log4j.Logger;
 import org.event_processing.events.types.Event;
 import org.ontoware.aifbcommons.collection.ClosableIterator;
 import org.ontoware.rdf2go.RDF2Go;
@@ -22,6 +21,12 @@ import eu.play_project.play_commons.constants.Namespace;
 import eu.play_project.play_commons.constants.Stream;
 import eu.play_project.play_commons.eventtypes.EventHelpers;
 
+/**
+ * An <i>iterable</i> simulator returning RDF models with simulted events in ascending
+ * temporal order.
+ * 
+ * @author Roland Stühmer
+ */
 public class SrbenchSimulator implements Iterable<Model> {
 
 	private static String sparqlPrefixes = "prefix om-owl:  <http://knoesis.wright.edu/ssw/ont/sensor-observation.owl#> " +
@@ -34,15 +39,24 @@ public class SrbenchSimulator implements Iterable<Model> {
 			"prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
 
 	private final String query;
-	private final Logger logger;
 	private final Model m;
 	
+	/**
+	 * Return a simulator.
+	 */
 	public SrbenchSimulator() throws SrbenchSimulatorException {
+		this("KLCK_2009_9_20.n3");
+	}
+	
+	/**
+	 * Return a simulator reading data from the specified file (using RDF
+	 * {@linkplain Syntax.Turtle}).
+	 */
+	public SrbenchSimulator(String turtleFileName) throws SrbenchSimulatorException {
 
-		this.logger = Logger.getLogger(SrbenchSimulator.class);
 		try{
 			m = RDF2Go.getModelFactory().createModel().open();
-			m.readFrom(SrbenchSimulator.class.getClassLoader().getResourceAsStream("KLCK_2009_9_20.n3"), Syntax.Turtle);
+			m.readFrom(SrbenchSimulator.class.getClassLoader().getResourceAsStream(turtleFileName), Syntax.Turtle);
 			
 			this.query = sparqlPrefixes + "" +
 					"SELECT ?observation ?data ?instant ?timestamp " +
@@ -55,6 +69,8 @@ public class SrbenchSimulator implements Iterable<Model> {
 					"ORDER BY ?timestamp ";
 			
 		} catch (ModelRuntimeException e) {
+			throw new SrbenchSimulatorException("Error reading simulation data.", e);
+		} catch (NullPointerException e) {
 			throw new SrbenchSimulatorException("Error reading simulation data.", e);
 		} catch (IOException e) {
 			throw new SrbenchSimulatorException("Error reading simulation data.", e);
@@ -82,7 +98,6 @@ public class SrbenchSimulator implements Iterable<Model> {
 		@Override
 		public Model next() {
 			QueryRow result = queryRows.next();
-			logger.debug(String.format("obs: %s, data: %s time: %s\n", result.getValue("observation"), result.getValue("data"), result.getValue("timestamp")));
 
 			String eventId = EventHelpers.createRandomEventId("srbech");
 			Event event = new Event(EventHelpers.createEmptyModel(eventId), eventId + EVENT_ID_SUFFIX, false);
