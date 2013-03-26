@@ -3,6 +3,7 @@ package org.ow2.play.srbench;
 import static eu.play_project.play_commons.constants.Event.EVENT_ID_SUFFIX;
 
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Iterator;
 
 import org.event_processing.events.types.Event;
@@ -108,7 +109,8 @@ public class SrbenchSimulator implements Iterable<Model> {
 			types.close();
 
 			// Get timestamp into the event payload:
-			event.setEndTime(result.getValue("timestamp"));
+			event.setEndTime(Calendar.getInstance());
+			//event.setEndTime(result.getValue("timestamp"));
 			event.setStream(new URIImpl(Namespace.STREAMS.getUri() + "Srbench" + Stream.STREAM_ID_SUFFIX));
 			event.setSource(new URIImpl(Namespace.SOURCE.getUri() + this.getClass().getSimpleName()));
 
