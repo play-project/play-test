@@ -14,6 +14,7 @@ public class SrbenchSimulatorTest {
 	public void testSrbenchSimulator() throws SrbenchSimulatorException {
 		for (Model simulatedEvent : new SrbenchSimulator("SMALL_FILE_01.n3")) {
 			simulatedEvent.dump();
+			System.out.println();
 		}
 	}
 }

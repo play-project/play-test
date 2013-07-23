@@ -102,6 +102,10 @@ public class SrbenchSimulator implements Iterable<Model> {
 
 			String eventId = EventHelpers.createRandomEventId("srbech");
 			Event event = new Event(EventHelpers.createEmptyModel(eventId), eventId + EVENT_ID_SUFFIX, false);
+			event.getModel().setNamespace("om-owl", "http://knoesis.wright.edu/ssw/ont/sensor-observation.owl#");
+			event.getModel().setNamespace("owl-time", "http://www.w3.org/2006/time#");
+			event.getModel().setNamespace("weather", "http://knoesis.wright.edu/ssw/ont/weather.owl#");
+
 			
 			// Set the event type manually:
 			ClosableIterator<Statement> types = m.findStatements(result.getValue("observation").asResource(), RDF.type, Variable.ANY);
