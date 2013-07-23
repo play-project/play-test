@@ -16,4 +16,10 @@
 
 PLAY Test
 =========
-Testing the platform.
+* New scenario will be used that it is called "PLAY Overall" scenario
+* In this scenario ALL PLAY components should be engaged and evaluated
+* "PLAY Overall" scenario will involve 4 different simple event streams using Twitter:
+** All tweets with #apple will be considered simple events A
+** All tweets with #microsoft will be considered simple events M
+** All tweets with #google will be considered simple events G
+** All tweets with #yahoo will be considered simple events Y
