@@ -16,8 +16,23 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.ow2.play</groupId>
+			<artifactId>play-eventadapter-abstractrdfsender-rest</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>rdf2go.impl.jena</artifactId>
+					<groupId>org.semweb4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.semweb4j</groupId>
+			<artifactId>rdf2go.impl.sesame</artifactId>
+			<version>4.8.4-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
@@ -30,7 +45,30 @@
 				<configuration>
 					<skip>true</skip>
 				</configuration>
-			</plugin>			
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>appassembler-maven-plugin</artifactId>
+				<version>1.4</version>
+				<configuration>
+					<assembleDirectory>target/overall-simulator</assembleDirectory>
+					<generateRepository>true</generateRepository>
+					<programs>
+						<program>
+							<mainClass>org.ow2.play.test.OverallSimulator</mainClass>
+							<name>overall-simulator</name>
+						</program>
+					</programs>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>assemble</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>
