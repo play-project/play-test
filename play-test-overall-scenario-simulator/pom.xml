@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <project
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<artifactId>play-test</artifactId>
@@ -34,11 +35,26 @@
 			<artifactId>rdf2go.impl.sesame</artifactId>
 			<version>4.8.4-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>org.codehaus.mojo.appassembler</groupId>
+			<artifactId>appassembler-booter</artifactId>
+			<version>1.4</version>
+		</dependency>
 	</dependencies>
 
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/config</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
 		<plugins>
-			<!-- Do not deploy this artefact to maven repo, it is very big. :stuehmer  -->
+			<!-- Do not deploy this artefact to maven repo, it is very big. :stuehmer -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
@@ -51,20 +67,43 @@
 				<artifactId>appassembler-maven-plugin</artifactId>
 				<version>1.4</version>
 				<configuration>
-					<assembleDirectory>target/overall-simulator</assembleDirectory>
-					<generateRepository>true</generateRepository>
-					<programs>
-						<program>
+					<repositoryLayout>flat</repositoryLayout>
+					<includeConfigurationDirectoryInClasspath>true</includeConfigurationDirectoryInClasspath>
+					<daemons>
+						<daemon>
+							<id>overall-simulator</id>
 							<mainClass>org.ow2.play.test.OverallSimulator</mainClass>
-							<name>overall-simulator</name>
-						</program>
-					</programs>
+							<platforms>
+								<platform>booter-unix</platform>
+								<platform>booter-windows</platform>
+							</platforms>
+						</daemon>
+					</daemons>
 				</configuration>
 				<executions>
 					<execution>
+						<goals>
+							<goal>generate-daemons</goal>
+							<goal>create-repository</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<descriptors>
+						<descriptor>src/main/assembly/default.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>assembly</id>
 						<phase>package</phase>
 						<goals>
-							<goal>assemble</goal>
+							<goal>single</goal>
 						</goals>
 					</execution>
 				</executions>

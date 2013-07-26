@@ -2,6 +2,7 @@ package org.ow2.play.test;
 
 import java.util.Iterator;
 
+import org.event_processing.events.types.TwitterEvent;
 import org.ontoware.aifbcommons.collection.ClosableIterator;
 import org.ontoware.rdf2go.model.Model;
 import org.ontoware.rdf2go.model.QueryResultTable;
@@ -25,7 +26,21 @@ public class TweetSimulator implements Iterator<Model> {
 	public TweetSimulator(RepositoryModelSet dataSet, String eventType) {
 		this.dataSet = dataSet;
 		this.eventType = new URIImpl(Namespace.TYPES.getUri() + eventType);
-	
+
+		/*
+		 * Get all event IDs from storage, sorted by time for later replay
+		 */
+		QueryResultTable count = dataSet.sparqlSelect(
+				"prefix : <http://events.event-processing.org/types/> " +
+				"SELECT (COUNT(?g) AS ?count) " +
+				"WHERE { GRAPH ?g { " +
+				"?s ?p ?o " +
+				"} " +
+				"} ");
+		
+		System.out.format("For keyword '%s' there were %s recorded tweets.\n", eventType, count.iterator().next().getLiteralValue("count"));
+
+		
 		/*
 		 * Get all event IDs from storage, sorted by time for later replay
 		 */
@@ -58,9 +73,10 @@ public class TweetSimulator implements Iterator<Model> {
 		 * Replace the generic TwitterEvent type a specific one per company keyword
 		 */
 		URI eventSubject = new URIImpl(uri.asURI().toString() + Event.EVENT_ID_SUFFIX);
-		model.removeStatements(eventSubject, RDF.type, Variable.ANY);
-		model.addStatement(eventSubject, RDF.type, this.eventType);
-		
+		if (model.contains(eventSubject, RDF.type, TwitterEvent.RDFS_CLASS)) {
+			model.removeStatements(eventSubject, RDF.type, Variable.ANY);
+			model.addStatement(eventSubject, RDF.type, this.eventType);
+		}
 		return model;
 	}
 
