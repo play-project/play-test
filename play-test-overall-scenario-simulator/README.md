@@ -26,7 +26,7 @@ PLAY Test
 
 Build
 -----
-1. To send events add your PLAY API token to your `$HOME/.m2/settings.xml` file as described here: 
+1. To send events add your PLAY API token to your `$HOME/.m2/settings.xml` file as described here: https://github.com/play-project/play-eventadapters/
 2. Build using `mvn install`
 
 Unpack/Configure
