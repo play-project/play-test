@@ -7,7 +7,6 @@ import org.ontoware.aifbcommons.collection.ClosableIterator;
 import org.ontoware.rdf2go.model.Model;
 import org.ontoware.rdf2go.model.QueryResultTable;
 import org.ontoware.rdf2go.model.QueryRow;
-import org.ontoware.rdf2go.model.node.Node;
 import org.ontoware.rdf2go.model.node.URI;
 import org.ontoware.rdf2go.model.node.Variable;
 import org.ontoware.rdf2go.model.node.impl.URIImpl;
@@ -22,6 +21,7 @@ public class TweetSimulator implements Iterator<Model> {
 	private final RepositoryModelSet dataSet;
 	private final ClosableIterator<QueryRow> eventIds;
 	private final URI eventType;
+	private URI currentGraphUri;
 
 	public TweetSimulator(RepositoryModelSet dataSet, String eventType) {
 		this.dataSet = dataSet;
@@ -66,13 +66,13 @@ public class TweetSimulator implements Iterator<Model> {
 		/*
 		 * Get the complete event (identified by ID) from storage
 		 */
-		Node uri = eventIds.next().getValue("g");
-		Model model = dataSet.getModel(uri.asURI());
+		this.currentGraphUri = eventIds.next().getValue("g").asURI();
+		Model model = dataSet.getModel(this.currentGraphUri);
 		
 		/*
 		 * Replace the generic TwitterEvent type a specific one per company keyword
 		 */
-		URI eventSubject = new URIImpl(uri.asURI().toString() + Event.EVENT_ID_SUFFIX);
+		URI eventSubject = new URIImpl(this.currentGraphUri.toString() + Event.EVENT_ID_SUFFIX);
 		if (model.contains(eventSubject, RDF.type, TwitterEvent.RDFS_CLASS)) {
 			model.removeStatements(eventSubject, RDF.type, Variable.ANY);
 			model.addStatement(eventSubject, RDF.type, this.eventType);
@@ -82,6 +82,11 @@ public class TweetSimulator implements Iterator<Model> {
 
 	@Override
 	public void remove() {
-		throw new UnsupportedOperationException("not implemented");
+		if (this.currentGraphUri == null) {
+			throw new IllegalStateException("next() was not invoked at least once");
+		}
+		else {
+			dataSet.removeModel(this.currentGraphUri);
+		}
 	}
 }
