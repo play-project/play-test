@@ -69,7 +69,7 @@ public class OverallSimulator {
 					}
 				}
 				else {
-					// There is no next loop if at least one simulator is our of stored events
+					// There is no next loop if at least one simulator is out of stored events
 					proceed = false;
 				}
 			}
