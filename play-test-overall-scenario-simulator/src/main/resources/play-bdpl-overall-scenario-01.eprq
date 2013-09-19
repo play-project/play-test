@@ -10,7 +10,7 @@ PREFIX :        <http://events.event-processing.org/types/>
 
 CONSTRUCT {
 	:e rdf:type :UcTelcoEsrRecom .
-	:e :stream <http://streams.event-processing.org/ids/TaxiUCESRRecomDcep#stream> .
+	:e :stream <http://streams.event-processing.org/ids/OverallResults01#stream> .
 	:e uctelco:ackRequired "false"^^xsd:boolean .
 	:e uctelco:answerRequired "false"^^xsd:boolean .
 	:e :message "Pattern 01: Four tweets about our companies were detected."^^xsd:string .
