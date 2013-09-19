@@ -3,14 +3,13 @@ package org.ow2.play.test;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import org.ontoware.rdf2go.model.Model;
 import org.openrdf.rdf2go.RepositoryModelSet;
 import org.openrdf.repository.RepositoryException;
 import org.openrdf.repository.sail.SailRepository;
 import org.openrdf.sail.memory.MemoryStore;
+import org.slf4j.LoggerFactory;
 
 import eu.play_project.play_commons.constants.Constants;
 import eu.play_project.play_commons.constants.Stream;
@@ -18,6 +17,7 @@ import eu.play_project.play_eventadapter.AbstractSenderRest;
 
 public class OverallSimulator {
 
+	private static org.slf4j.Logger logger;
 	private final Map<String, SailRepository> sesameRepository = new HashMap<String, SailRepository>();
 	public Map<String, RepositoryModelSet> sesame = new HashMap<String, RepositoryModelSet>();
 	/**
@@ -33,7 +33,7 @@ public class OverallSimulator {
 	public static void main(String[] args) {
 		final OverallSimulator sim = new OverallSimulator();
 		final AbstractSenderRest sender = new AbstractSenderRest(Stream.TwitterFeed.getTopicQName());
-		
+		logger = LoggerFactory.getLogger(OverallSimulator.class);
 		
 		sim.init();
 		
@@ -61,6 +61,8 @@ public class OverallSimulator {
 					System.out.println("==============================================================================================");
 					System.out.println(m.getContextURI());
 					sender.notify(m);
+					logger.info("NOTIFIER Exit " + m.getContextURI());
+
 					m.close();
 					try {
 						Thread.sleep(DELAY);
@@ -101,8 +103,7 @@ public class OverallSimulator {
 				simulator.put(company, new TweetSimulator(sesame.get(company), company));
 
 			} catch (RepositoryException e) {
-				Logger.getAnonymousLogger().log(Level.WARNING,
-						"Problem while initializing Sesame storage.", e);
+				logger.warn("Problem while initializing Sesame storage.", e);
 			}
 
 		}
