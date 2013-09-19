@@ -28,13 +28,13 @@ public class TweetSimulator implements Iterator<Model> {
 		this.eventType = new URIImpl(Namespace.TYPES.getUri() + eventType);
 
 		/*
-		 * Get all event IDs from storage, sorted by time for later replay
+		 * Count all event IDs in storage
 		 */
 		QueryResultTable count = dataSet.sparqlSelect(
 				"prefix : <http://events.event-processing.org/types/> " +
 				"SELECT (COUNT(?g) AS ?count) " +
 				"WHERE { GRAPH ?g { " +
-				"?s ?p ?o " +
+				"?s :endTime ?time " +
 				"} " +
 				"} ");
 		
