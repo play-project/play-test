@@ -17,7 +17,7 @@ CONSTRUCT {
 	:e :message "Pattern 02: Four company-related events were detected using stricter filters."^^xsd:string .
 	:e uctelco:action <blank://action1> .
 	<blank://action1> rdf:type uctelco:OpenTwitter ;
-		:screenName ?screenName01 .
+		:screenName ?screenName01 , ?screenName02 , ?screenName03 , ?screenName04 .
 	:e :members ?e1 , ?e2 , ?e3 , ?e4 .
 }
 WHERE {
@@ -34,6 +34,7 @@ WHERE {
 		EVENT ?id2 {
 			?e2 rdf:type :apple .
 			?e2 :stream <http://streams.event-processing.org/ids/TwitterFeed#stream> .
+			?e2 :screenName ?screenName02 .
 			?e2 :isRetweet "false" .
 			?e2 :friendsCount ?friendsCount02 .
 			}
@@ -42,6 +43,7 @@ WHERE {
 		EVENT ?id3 {
 			?e3 rdf:type :microsoft .
 			?e3 :stream <http://streams.event-processing.org/ids/TwitterFeed#stream> .
+			?e3 :screenName ?screenName03 .
 			?e3 :isRetweet "false" .
 			?e3 :friendsCount ?friendsCount03 .
 			}
@@ -50,6 +52,7 @@ WHERE {
 		EVENT ?id4 {
 			?e4 rdf:type :yahoo .
 			?e4 :stream <http://streams.event-processing.org/ids/TwitterFeed#stream> .
+			?e4 :screenName ?screenName04 .
 			?e4 :isRetweet "false" .
 			?e4 :friendsCount ?friendsCount04 .
 			}
