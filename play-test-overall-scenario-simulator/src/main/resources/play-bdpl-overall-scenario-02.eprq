@@ -17,45 +17,45 @@ CONSTRUCT {
 	:e :message "Pattern 02: Four company-related events were detected using stricter filters."^^xsd:string .
 	:e uctelco:action <blank://action1> .
 	<blank://action1> rdf:type uctelco:OpenTwitter ;
-		:screenName ?p02screenName01 , ?p02screenName02 , ?p02screenName03 , ?p02screenName04 .
-	:e :members ?p02e1 , ?p02e2 , ?p02e3 , ?p02e4 .
+		:screenName ?screenName01 , ?screenName02 , ?screenName03 , ?screenName04 .
+	:e :members ?e1 , ?e2 , ?e3 , ?e4 .
 }
 WHERE {
 	WINDOW {
-		EVENT ?p02id1 {
-			?p02e1 rdf:type :google .
-			?p02e1 :stream <http://streams.event-processing.org/ids/TwitterFeed#stream> .
-			?p02e1 :screenName ?p02screenName01 .
-			?p02e1 :isRetweet "false" .
-			?p02e1 :friendsCount ?p02friendsCount01 .
+		EVENT ?id1 {
+			?e1 rdf:type :google .
+			?e1 :stream <http://streams.event-processing.org/ids/TwitterFeed#stream> .
+			?e1 :screenName ?screenName01 .
+			?e1 :isRetweet "false" .
+			?e1 :friendsCount ?friendsCount01 .
 			}
-			FILTER(?p02friendsCount01 > "10")
+			FILTER(?friendsCount01 > "10")
 		SEQ
-		EVENT ?p02id2 {
-			?p02e2 rdf:type :apple .
-			?p02e2 :stream <http://streams.event-processing.org/ids/TwitterFeed#stream> .
-			?p02e2 :screenName ?p02screenName02 .
-			?p02e2 :isRetweet "false" .
-			?p02e2 :friendsCount ?p02friendsCount02 .
+		EVENT ?id2 {
+			?e2 rdf:type :apple .
+			?e2 :stream <http://streams.event-processing.org/ids/TwitterFeed#stream> .
+			?e2 :screenName ?screenName02 .
+			?e2 :isRetweet "false" .
+			?e2 :friendsCount ?friendsCount02 .
 			}
-			FILTER(?p02friendsCount02 > "10")
+			FILTER(?friendsCount02 > "10")
 		SEQ
-		EVENT ?p02id3 {
-			?p02e3 rdf:type :microsoft .
-			?p02e3 :stream <http://streams.event-processing.org/ids/TwitterFeed#stream> .
-			?p02e3 :screenName ?p02screenName03 .
-			?p02e3 :isRetweet "false" .
-			?p02e3 :friendsCount ?p02friendsCount03 .
+		EVENT ?id3 {
+			?e3 rdf:type :microsoft .
+			?e3 :stream <http://streams.event-processing.org/ids/TwitterFeed#stream> .
+			?e3 :screenName ?screenName03 .
+			?e3 :isRetweet "false" .
+			?e3 :friendsCount ?friendsCount03 .
 			}
-			FILTER(?p02friendsCount03 > "10")
+			FILTER(?friendsCount03 > "10")
 		SEQ
-		EVENT ?p02id4 {
-			?p02e4 rdf:type :yahoo .
-			?p02e4 :stream <http://streams.event-processing.org/ids/TwitterFeed#stream> .
-			?p02e4 :screenName ?p02screenName04 .
-			?p02e4 :isRetweet "false" .
-			?p02e4 :friendsCount ?p02friendsCount04 .
+		EVENT ?id4 {
+			?e4 rdf:type :yahoo .
+			?e4 :stream <http://streams.event-processing.org/ids/TwitterFeed#stream> .
+			?e4 :screenName ?screenName04 .
+			?e4 :isRetweet "false" .
+			?e4 :friendsCount ?friendsCount04 .
 			}
-			FILTER(?p02friendsCount04 > "10")
+			FILTER(?friendsCount04 > "10")
 	} ("PT5S"^^xsd:duration, sliding)
 }
