@@ -16,7 +16,7 @@ CONSTRUCT {
 	:e :message "Pattern 01: Four tweets about our companies were detected."^^xsd:string .
 	:e uctelco:action <blank://action1> .
 	<blank://action1> rdf:type uctelco:OpenTwitter ;
-		:screenName ?screenName01 , ?screenName02 , ?screenName03 , ?screenName04 .
+		:screenName ?screenName01 .
 	:e :members ?e1 , ?e2 , ?e3 , ?e4 .
 }
 WHERE {
@@ -30,19 +30,16 @@ WHERE {
 		EVENT ?id2 {
 			?e2 rdf:type :apple .
 			?e2 :stream <http://streams.event-processing.org/ids/TwitterFeed#stream> .
-			?e2 :screenName ?screenName02 .
 			}
 		SEQ
 		EVENT ?id3 {
 			?e3 rdf:type :microsoft .
 			?e3 :stream <http://streams.event-processing.org/ids/TwitterFeed#stream> .
-			?e3 :screenName ?screenName03 .
 			}
 		SEQ
 		EVENT ?id4 {
 			?e4 rdf:type :yahoo .
 			?e4 :stream <http://streams.event-processing.org/ids/TwitterFeed#stream> .
-			?e4 :screenName ?screenName04 .
 			}
 	} ("PT5S"^^xsd:duration, sliding)
 }
