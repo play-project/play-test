@@ -143,7 +143,7 @@ public class Main {
 
     public static final void usage() {
         System.out
-                .println("pubsubcli <simulation name e.g. t1p1s1>");
+                .println("pubsubcli <host> <port> <simulation name e.g. t1p1s1>");
     }
 
 
