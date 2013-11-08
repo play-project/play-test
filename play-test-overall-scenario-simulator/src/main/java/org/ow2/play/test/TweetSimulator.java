@@ -1,12 +1,15 @@
 package org.ow2.play.test;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
+import java.util.regex.Pattern;
 
 import org.event_processing.events.types.TwitterEvent;
 import org.ontoware.aifbcommons.collection.ClosableIterator;
 import org.ontoware.rdf2go.model.Model;
 import org.ontoware.rdf2go.model.QueryResultTable;
 import org.ontoware.rdf2go.model.QueryRow;
+import org.ontoware.rdf2go.model.Statement;
 import org.ontoware.rdf2go.model.node.URI;
 import org.ontoware.rdf2go.model.node.Variable;
 import org.ontoware.rdf2go.model.node.impl.URIImpl;
@@ -76,6 +79,31 @@ public class TweetSimulator implements Iterator<Model> {
 		if (model.contains(eventSubject, RDF.type, TwitterEvent.RDFS_CLASS)) {
 			model.removeStatements(eventSubject, RDF.type, Variable.ANY);
 			model.addStatement(eventSubject, RDF.type, this.eventType);
+		}
+		
+		/*
+		 * Find some special characters in tweet messages
+		 */
+		URIImpl siocContent = new URIImpl(Namespace.SIOC.getUri() + "content");
+		ClosableIterator<Statement> tweetMessages = model.findStatements(eventSubject, siocContent, Variable.ANY);
+		while (tweetMessages.hasNext()) {
+			Statement tweetMessage = tweetMessages.next();
+			String oldMessage = tweetMessage.getObject().toString();
+			System.out.println(oldMessage);
+
+			// check on unicode level:
+			if (Pattern.compile("\\p{C}").matcher(oldMessage).find()) {
+				System.out.println("Found char 2[] in string " + oldMessage);
+			}
+			
+			// check on ascii level:
+			oldMessage.getBytes(StandardCharsets.US_ASCII);
+
+			
+			//String newMessage =
+			
+			//model.removeStatements(tweetMessage); // TODO enable for permanent change on disk
+			//model.addStatement(eventSubject, siocContent, newMessage);
 		}
 		return model;
 	}
