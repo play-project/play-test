@@ -29,9 +29,9 @@ public class Main {
     static boolean started = false;
 
     /** Seconds to wait for all events to come in */
-	private static int waitForResults = 2*60;
+	private static final int waitForResults = 2*60;
 
-	
+	private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
 	/**
      * args[0] = local IP, args[1] = local (free) port,
@@ -41,8 +41,6 @@ public class Main {
      */
     public static void main(String[] args) throws IOException {
 
-    	Logger logger = LoggerFactory.getLogger(Main.class);
-    	
         if (args == null || args.length < 3) {
             System.err.println("!!! Bad number of arguments");
             usage();
@@ -54,6 +52,18 @@ public class Main {
 
         String me = "http://" + host + ":" + port + "/pubsubcli/Service";
 
+        // add shutdown hook to gracefully catch CTRL-C
+		Runtime.getRuntime().addShutdownHook(new Thread() {
+			@Override
+			public void run() {
+				logger.info("Shutting down...");
+				synchronized (Main.class) {
+					started = false;
+					Main.class.notifyAll();
+				}
+			}
+		});
+		
         String provider = Constants.getProperties().getProperty("dsb.subscribe.endpoint");
         String simulationName = args[2];
         
@@ -63,10 +73,15 @@ public class Main {
            	INotificationConsumer consumer = new T1P1S1Consumer(pubSubClientServer);
          	pubSubClientServer.start(consumer);
            	pubSubClientServer.simulate(notifier);
-           	try {
-				Thread.sleep(waitForResults * 1000);
-			} catch (InterruptedException e) {
-			}
+           	
+           	synchronized (Main.class) {
+           		try {
+					Main.class.wait(waitForResults * 1000);
+				} catch (InterruptedException e) {
+					logger.info("Got InterruptedException.");
+				}
+           	}
+ 
            	pubSubClientServer.stop();
            	if (Stats.get().nb == 200) {
            		logger.info("TEST {} true", simulationName);
@@ -84,10 +99,13 @@ public class Main {
        		INotificationConsumer consumer = new T1P1S2Consumer(pubSubClientServer);
      		pubSubClientServer.start(consumer);
        		pubSubClientServer.simulate(notifier);
-           	try {
-				Thread.sleep(waitForResults * 1000);
-			} catch (InterruptedException e) {
-			}
+           	synchronized (Main.class) {
+           		try {
+					Main.class.wait(waitForResults * 1000);
+				} catch (InterruptedException e) {
+					logger.info("Got InterruptedException.");
+				}
+           	}
            	pubSubClientServer.stop();
            	if (Stats.get().nb == 30) {
            		logger.info("TEST {} true", simulationName);
@@ -105,10 +123,13 @@ public class Main {
        		INotificationConsumer consumer = new T1P2S1Consumer(pubSubClientServer);
      		pubSubClientServer.start(consumer);
        		pubSubClientServer.simulate(notifier);
-           	try {
-				Thread.sleep(waitForResults * 1000);
-			} catch (InterruptedException e) {
-			}
+           	synchronized (Main.class) {
+           		try {
+					Main.class.wait(waitForResults * 1000);
+				} catch (InterruptedException e) {
+					logger.info("Got InterruptedException.");
+				}
+           	}
            	pubSubClientServer.stop();
            	if (Stats.get().nb == 30) {
            		logger.info("TEST {} true", simulationName);
@@ -120,16 +141,18 @@ public class Main {
            		logger.info("TEST {} false received_more_than_30_complex_events", simulationName);
            	}
         }
-        else if (simulationName.equals("overall-receiver")) { // receiver for M36 overall-tests
+        else if (simulationName.equals("overall-receiver")) { // receiver for M36 overall-scenario tests
             pubSubClientServer = new PubSubClientServer(System.out, OverallConsumer.topic, provider, me);
-           	Runnable notifier = new T1P1S1Notifier();
            	INotificationConsumer consumer = new OverallConsumer(pubSubClientServer);
          	pubSubClientServer.start(consumer);
-           	//pubSubClientServer.simulate(notifier); // no simulations in this test we only want to receive
-           	try {
-				Thread.sleep(waitForResults * 1000);
-			} catch (InterruptedException e) {
-			}
+           	//pubSubClientServer.simulate(notifier); // no simulations in this test, we only want to receive
+           	synchronized (Main.class) {
+           		try {
+					Main.class.wait(waitForResults * 1000);
+				} catch (InterruptedException e) {
+					logger.info("Got InterruptedException.");
+				}
+           	}
            	pubSubClientServer.stop();
 
            	logger.info("TEST {} received {} events", simulationName, Stats.get().nb);
