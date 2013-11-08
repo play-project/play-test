@@ -24,11 +24,11 @@ public class PubSubClientServer {
 
     private String subscriptionID;
 
-    private QName topic;
+    private final QName[] topics;
 
-    private String producer;
+    private final String producer;
 
-    private String me;
+    private final String me;
 
     Service server = null;
 
@@ -36,17 +36,17 @@ public class PubSubClientServer {
 
 	private CXFExposer exposer;
 
-    public PubSubClientServer(PrintStream out, QName topic, String producer, String me) {
+    public PubSubClientServer(PrintStream out, String producer, String me, QName... topics) {
         super();
         this.out = out;
-        this.topic = topic;
+        this.topics = topics;
         this.producer = producer;
         this.me = me;
     }
 
     
     public void start() {
-        start(new T1P1S1Consumer(this));   
+        start(new T1P1S1Consumer(this));
     }
     
     public void start(INotificationConsumer consumer) {
@@ -75,11 +75,13 @@ public class PubSubClientServer {
         server.start();
         out.println("Created!");
 
-        out.println("Subscribe to notification on topic " + topic);
+        out.println("Subscribe to notification on topics " + topics);
         HTTPProducerClient pc = new HTTPProducerClient(producer);
         try {
-            subscriptionID = pc.subscribe(topic, me);
-            out.println("Subscribed, ID is " + subscriptionID);
+        	for (QName topic : topics) {
+	            subscriptionID = pc.subscribe(topic, me);
+	            out.println("Subscribed, ID is " + subscriptionID + " for topic " + topic);
+	        }
         } catch (NotificationException e1) {
             e1.printStackTrace();
         }

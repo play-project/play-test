@@ -2,7 +2,7 @@ package org.ow2.play.test.pubsub.subscriber;
 
 import javax.xml.namespace.QName;
 
-import org.event_processing.events.types.UcTelcoClic2Call;
+import org.ontoware.rdf2go.model.Model;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -12,7 +12,10 @@ import com.ebmwebsourcing.wsstar.basenotification.datatypes.api.utils.WsnbExcept
 import com.ebmwebsourcing.wsstar.wsnb.services.INotificationConsumer;
 import com.ebmwebsourcing.wsstar.wsnb.services.impl.util.Wsnb4ServUtils;
 
+import eu.play_project.dcep.distributedetalis.utils.EventCloudHelpers;
+import eu.play_project.play_commons.constants.Namespace;
 import eu.play_project.play_commons.constants.Stream;
+import eu.play_project.play_commons.eventtypes.EventTypeMetadata;
 import eu.play_project.play_eventadapter.AbstractReceiver;
 
 /**
@@ -27,7 +30,10 @@ final class OverallConsumer implements INotificationConsumer {
 	private final PubSubClientServer pubSubClientServer;
 	private final Logger logger;
 	private final AbstractReceiver rdfParser;
-	public static QName topic = Stream.TaxiUCESRRecomDcep.getTopicQName(); // bogus topic because we will to manual subscriptions
+	public static QName[] topics = {
+		Stream.ESRRecom.getTopicQName(),
+		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix())
+	};
 	private final Stats stats = Stats.get();
 
 	/**
@@ -44,10 +50,10 @@ final class OverallConsumer implements INotificationConsumer {
 	public void notify(Notify notify) throws WsnbException {
 	    Document dom = Wsnb4ServUtils.getWsnbWriter().writeNotifyAsDOM(notify);
 	    
-	    UcTelcoClic2Call event;
 		try {
-			event = rdfParser.getEvent(dom, UcTelcoClic2Call.class);
-			logger.info("RECEIVER Entry " + event.getModel().getContextURI() + " " + Main.getMembers(event.getModel()));
+			Model rdf = rdfParser.parseRdf(dom);
+			logger.info("RECEIVER Entry {} {}", rdf.getContextURI(), Main.getMembers(rdf));
+			logger.info("TYPE '{}' TOPIC '{}'", EventTypeMetadata.getType(rdf), EventCloudHelpers.getCloudId(rdf));
 		    stats.request();
 			System.out.println("RECIEVER counted " + stats.nb + " events.");
 		} catch (Exception e) {

@@ -29,7 +29,7 @@ public class Main {
     static boolean started = false;
 
     /** Seconds to wait for all events to come in */
-	private static final int waitForResults = 2*60;
+	private static final int waitForResults = 3*60;
 
 	private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
@@ -68,7 +68,7 @@ public class Main {
         String simulationName = args[2];
         
         if (simulationName.equals("t1p1s1")) {
-            pubSubClientServer = new PubSubClientServer(System.out, T1P1S1Consumer.topic, provider, me);
+            pubSubClientServer = new PubSubClientServer(System.out, provider, me, T1P1S1Consumer.topic);
            	Runnable notifier = new T1P1S1Notifier();
            	INotificationConsumer consumer = new T1P1S1Consumer(pubSubClientServer);
          	pubSubClientServer.start(consumer);
@@ -94,7 +94,7 @@ public class Main {
            	}
         }
         else if (simulationName.equals("t1p1s2")) {
-        	pubSubClientServer = new PubSubClientServer(System.out, T1P1S2Consumer.topic, provider, me);
+        	pubSubClientServer = new PubSubClientServer(System.out, provider, me, T1P1S2Consumer.topic);
        		Runnable notifier = new T1P1S2Notifier();
        		INotificationConsumer consumer = new T1P1S2Consumer(pubSubClientServer);
      		pubSubClientServer.start(consumer);
@@ -118,7 +118,7 @@ public class Main {
            	}
         }
         else if (simulationName.equals("t1p2s1")) {
-        	pubSubClientServer = new PubSubClientServer(System.out, T1P2S1Consumer.topic, provider, me);
+        	pubSubClientServer = new PubSubClientServer(System.out, provider, me, T1P2S1Consumer.topic);
        		Runnable notifier = new T1P2S1Notifier();
        		INotificationConsumer consumer = new T1P2S1Consumer(pubSubClientServer);
      		pubSubClientServer.start(consumer);
@@ -142,7 +142,7 @@ public class Main {
            	}
         }
         else if (simulationName.equals("overall-receiver")) { // receiver for M36 overall-scenario tests
-            pubSubClientServer = new PubSubClientServer(System.out, OverallConsumer.topic, provider, me);
+            pubSubClientServer = new PubSubClientServer(System.out, provider, me, OverallConsumer.topics);
            	INotificationConsumer consumer = new OverallConsumer(pubSubClientServer);
          	pubSubClientServer.start(consumer);
            	//pubSubClientServer.simulate(notifier); // no simulations in this test, we only want to receive
