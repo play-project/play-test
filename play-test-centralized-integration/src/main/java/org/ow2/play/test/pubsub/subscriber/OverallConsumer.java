@@ -154,7 +154,7 @@ final class OverallConsumer implements INotificationConsumer {
 	    
 		try {
 			Model rdf = rdfParser.parseRdf(dom);
-			logger.info("RECEIVER Entry {} {}", rdf.getContextURI(), Main.getMembers(rdf));
+			logger.info("RECEIVER Entry {}", rdf.getContextURI());
 			logger.info("TYPE '{}' TOPIC '{}'", EventTypeMetadata.getType(rdf), EventCloudHelpers.getCloudId(rdf));
 		    stats.request();
 			System.out.println("RECIEVER counted " + stats.nb + " events.");
