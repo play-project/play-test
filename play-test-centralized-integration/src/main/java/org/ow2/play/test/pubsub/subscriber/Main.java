@@ -29,7 +29,7 @@ public class Main {
     static boolean started = false;
 
     /** Seconds to wait for all events to come in */
-	private static int waitForResults = 90;
+	private static int waitForResults = 2*60;
 
 	
 
@@ -118,8 +118,22 @@ public class Main {
            	}
            	else {
            		logger.info("TEST {} false received_more_than_30_complex_events", simulationName);
-           	}           	
-        }  
+           	}
+        }
+        else if (simulationName.equals("overall-receiver")) { // receiver for M36 overall-tests
+            pubSubClientServer = new PubSubClientServer(System.out, OverallConsumer.topic, provider, me);
+           	Runnable notifier = new T1P1S1Notifier();
+           	INotificationConsumer consumer = new OverallConsumer(pubSubClientServer);
+         	pubSubClientServer.start(consumer);
+           	//pubSubClientServer.simulate(notifier); // no simulations in this test we only want to receive
+           	try {
+				Thread.sleep(waitForResults * 1000);
+			} catch (InterruptedException e) {
+			}
+           	pubSubClientServer.stop();
+
+           	logger.info("TEST {} received {} events", simulationName, Stats.get().nb);
+        }
         else {
         	usage();
         }
