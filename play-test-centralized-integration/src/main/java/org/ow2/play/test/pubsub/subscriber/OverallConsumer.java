@@ -32,7 +32,9 @@ final class OverallConsumer implements INotificationConsumer {
 	private final AbstractReceiver rdfParser;
 	public static QName[] topics = {
 		Stream.ESRRecom.getTopicQName(),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix())
+		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
+		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
+		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix())
 	};
 	private final Stats stats = Stats.get();
 

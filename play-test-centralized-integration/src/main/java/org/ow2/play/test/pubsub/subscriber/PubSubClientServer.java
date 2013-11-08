@@ -4,6 +4,8 @@
 package org.ow2.play.test.pubsub.subscriber;
 
 import java.io.PrintStream;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.xml.namespace.QName;
 
@@ -22,7 +24,7 @@ import com.ebmwebsourcing.wsstar.wsnb.services.INotificationConsumer;
  */
 public class PubSubClientServer {
 
-    private String subscriptionID;
+    private final Set<String> subscriptionIds = new HashSet<String>();
 
     private final QName[] topics;
 
@@ -79,8 +81,9 @@ public class PubSubClientServer {
         HTTPProducerClient pc = new HTTPProducerClient(producer);
         try {
         	for (QName topic : topics) {
-	            subscriptionID = pc.subscribe(topic, me);
-	            out.println("Subscribed, ID is " + subscriptionID + " for topic " + topic);
+        		String newId = pc.subscribe(topic, me);
+	            subscriptionIds.add(newId);
+	            out.println("Subscribed, ID is " + newId + " for topic " + topic);
 	        }
         } catch (NotificationException e1) {
             e1.printStackTrace();
@@ -103,14 +106,16 @@ public class PubSubClientServer {
         }
         out.println("Stopped!");
 
-        if (subscriptionID != null) {
+        if (!subscriptionIds.isEmpty()) {
             // try to unsubscribe
             out.println("Unsubscribe...");
             HTTPSubscriptionManagerClient client = new HTTPSubscriptionManagerClient(producer);
-            try {
-                client.unsubscribe(subscriptionID);
-            } catch (NotificationException e) {
-                System.err.println(e.getMessage());
+            for (String subscriptionId : subscriptionIds) {
+	            try {
+	                client.unsubscribe(subscriptionId);
+	            } catch (NotificationException e) {
+	                System.err.println(e.getMessage());
+	            }
             }
             out.println("Done!");
         }
