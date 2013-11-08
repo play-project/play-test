@@ -15,10 +15,15 @@ import com.ebmwebsourcing.wsstar.wsnb.services.impl.util.Wsnb4ServUtils;
 import eu.play_project.play_commons.constants.Stream;
 import eu.play_project.play_eventadapter.AbstractReceiver;
 
+/**
+ * Mainly a receiever for events to stress-test many subscriptions. For M36
+ * overall-scenario tests at month M36.
+ * 
+ * @author Roland Stühmer
+ * 
+ */
 final class OverallConsumer implements INotificationConsumer {
-	/**
-	 * 
-	 */
+
 	private final PubSubClientServer pubSubClientServer;
 	private final Logger logger;
 	private final AbstractReceiver rdfParser;
