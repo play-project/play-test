@@ -101,6 +101,7 @@
 						-Dproactive.pnp.port=9000
 						-Dproactive.http.port=9001
 						-Dproactive.rmi.port=1099
+						-Dorg.apache.cxf.Logger=org.apache.cxf.common.logging.Slf4jLogger
 					</argLine>
 				</configuration>
 				<executions>
