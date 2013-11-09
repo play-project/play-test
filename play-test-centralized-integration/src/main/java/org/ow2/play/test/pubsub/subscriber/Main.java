@@ -4,7 +4,11 @@
 package org.ow2.play.test.pubsub.subscriber;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+
+import javax.xml.namespace.QName;
 
 import org.event_processing.events.types.Event;
 import org.ontoware.rdf2go.model.Model;
@@ -16,6 +20,8 @@ import org.slf4j.LoggerFactory;
 import com.ebmwebsourcing.wsstar.wsnb.services.INotificationConsumer;
 
 import eu.play_project.play_commons.constants.Constants;
+import eu.play_project.play_commons.constants.Namespace;
+import eu.play_project.play_commons.constants.Stream;
 
 /**
  * @author chamerling
@@ -29,7 +35,7 @@ public class Main {
     static boolean started = false;
 
     /** Seconds to wait for all events to come in */
-	private static final int waitForResults = 3*60;
+	private static final int waitForResults = 80*60;
 
 	private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
@@ -142,7 +148,23 @@ public class Main {
            	}
         }
         else if (simulationName.equals("overall-receiver")) { // receiver for M36 overall-scenario tests
-            pubSubClientServer = new PubSubClientServer(System.out, provider, me, OverallConsumer.topics);
+        	
+        	List<QName> topics = new ArrayList<QName>();
+    		QName topic1 = new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix());
+    		QName topic2 = new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix());
+    		QName topic3 = new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix());
+      	
+        	for (int i = 0; i<500; i++) {
+        		topics.add(Stream.ESRRecom.getTopicQName());
+        		topics.add(Stream.TwitterFeed.getTopicQName());
+        		topics.add(topic1);
+        		topics.add(topic2);
+        		topics.add(topic3);
+        	}
+        	
+        	System.out.println("Number of topics: " + topics.size());
+        	
+            pubSubClientServer = new PubSubClientServer(System.out, provider, me, topics.toArray(new QName[topics.size()]));
            	INotificationConsumer consumer = new OverallConsumer(pubSubClientServer);
          	pubSubClientServer.start(consumer);
            	//pubSubClientServer.simulate(notifier); // no simulations in this test, we only want to receive
