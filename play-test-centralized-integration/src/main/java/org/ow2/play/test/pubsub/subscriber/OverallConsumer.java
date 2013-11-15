@@ -1,7 +1,5 @@
 package org.ow2.play.test.pubsub.subscriber;
 
-import javax.xml.namespace.QName;
-
 import org.ontoware.rdf2go.model.Model;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,8 +11,6 @@ import com.ebmwebsourcing.wsstar.wsnb.services.INotificationConsumer;
 import com.ebmwebsourcing.wsstar.wsnb.services.impl.util.Wsnb4ServUtils;
 
 import eu.play_project.dcep.distributedetalis.utils.EventCloudHelpers;
-import eu.play_project.play_commons.constants.Namespace;
-import eu.play_project.play_commons.constants.Stream;
 import eu.play_project.play_commons.eventtypes.EventTypeMetadata;
 import eu.play_project.play_eventadapter.AbstractReceiver;
 
@@ -30,112 +26,6 @@ final class OverallConsumer implements INotificationConsumer {
 	private final PubSubClientServer pubSubClientServer;
 	private final Logger logger;
 	private final AbstractReceiver rdfParser;
-	public static QName[] topics = {
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-		Stream.ESRRecom.getTopicQName(),
-
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-		Stream.TwitterFeed.getTopicQName(),
-
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults01", Namespace.STREAMS.getPrefix()),
-		
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults02", Namespace.STREAMS.getPrefix()),
-
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-		new QName(Namespace.STREAMS.getUri(), "OverallResults03", Namespace.STREAMS.getPrefix()),
-	};
 	private final Stats stats = Stats.get();
 
 	/**
