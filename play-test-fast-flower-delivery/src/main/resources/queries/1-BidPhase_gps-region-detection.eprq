@@ -12,8 +12,8 @@ PREFIX :        <http://events.event-processing.org/types/>
 CONSTRUCT {
 	:e rdf:type :DriverLocation.
 	:e :stream <http://streams.event-processing.org/ids/locationChannel#stream> .
-	:e :driver ?name
-	:e :location
+	:e :driver ?name .
+	:e :location ?quarter
 	}
 WHERE {
 	EVENT ?id1 {

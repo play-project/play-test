@@ -12,7 +12,7 @@ PREFIX :        <http://events.event-processing.org/types/>
 CONSTRUCT {
 	:e rdf:type :DeliveryRequestEnriched .
 	:e :stream <http://streams.event-processing.org/ids/fds#stream> .
-	:e :store	?store .
+	:e :store ?store .
 	:e :requestId ?requestId.
 	:e :addresseeLocation ?addresseeLocation .
 	:e :requiredPickupTime ?requiredPickupTime .
@@ -30,7 +30,6 @@ WHERE {
 		?e1 :requiredDeliveryTime ?requiredDeliveryTime
 	}
 	GRAPH ?id2 {
-		?s :store ?store .
-		?s :minimumRanking ?minimumRanking .
+		?store :minimumRanking ?minimumRanking .
 	}
 }

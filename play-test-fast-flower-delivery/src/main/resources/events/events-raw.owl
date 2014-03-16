@@ -237,6 +237,12 @@
 
 
 
+###  http://streams.event-processing.org/types/minimumRanking
+
+<http://streams.event-processing.org/types/minimumRanking> rdf:type owl:DatatypeProperty .
+
+
+
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
 
 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:DatatypeProperty .
@@ -460,13 +466,17 @@
 
 ###  http://events.event-processing.org/types/FlowerShop42
 
-<http://events.event-processing.org/types/FlowerShop42> rdf:type owl:NamedIndividual .
+<http://events.event-processing.org/types/FlowerShop42> rdf:type owl:NamedIndividual ;
+                                                        
+                                                        <http://streams.event-processing.org/types/minimumRanking> "2"^^xsd:int .
 
 
 
 ###  http://events.event-processing.org/types/John
 
-<http://events.event-processing.org/types/John> rdf:type <http://events.event-processing.org/types/Driver>;                                               
+<http://events.event-processing.org/types/John> rdf:type <http://events.event-processing.org/types/Driver> ,
+                                                         owl:NamedIndividual ;
+                                                
                                                 <http://events.event-processing.org/types/ranking> "5"^^xsd:int .
 
 
