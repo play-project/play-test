@@ -34,7 +34,7 @@ WHERE {
 	GRAPH ?id2 {
 		?s1 rdf:type :DriverLocation .
 		?s1 :driver ?driver .
-		?s1 :location ?addresseeLocation 
+		?s1 :location ?addresseeLocation .
 	}
 	GRAPH ?id3 {
 		?driver rdf:type :Driver .

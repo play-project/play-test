@@ -414,6 +414,12 @@
 
 
 
+###  http://streams.event-processing.org/types/NoBiddersAlert
+
+<http://streams.event-processing.org/types/NoBiddersAlert> rdf:type owl:Class .
+
+
+
 
 
 #################################################################
