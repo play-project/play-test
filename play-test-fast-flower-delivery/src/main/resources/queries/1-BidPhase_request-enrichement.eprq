@@ -1,0 +1,36 @@
+#
+# Title: "Fast Flower Delivery" 1:Bid Phase. Enrich DeliveryRequest with minimum ranking for drivers of the shop.
+#
+# 
+
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX uccrisis: <http://www.mines-albi.fr/nuclearcrisisevent/>
+PREFIX geo:     <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX :        <http://events.event-processing.org/types/>
+
+CONSTRUCT {
+	:e rdf:type :DeliveryRequestEnriched .
+	:e :stream <http://streams.event-processing.org/ids/fds#stream> .
+	:e :store	?store .
+	:e :requestId ?requestId.
+	:e :addresseeLocation ?addresseeLocation .
+	:e :requiredPickupTime ?requiredPickupTime .
+	:e :requiredDeliveryTime ?requiredDeliveryTime .
+	:e :minimumRanking ?minimumRanking
+	}
+WHERE {
+	EVENT ?id1 {
+		?e1 rdf:type :DeliveryRequest .
+		?e1 :stream <http://streams.event-processing.org/ids/fds#stream> .
+		?e1 :store	?store .
+		?e1 :requestId ?requestId.
+		?e1 :addresseeLocation ?addresseeLocation .
+		?e1 :requiredPickupTime ?requiredPickupTime .
+		?e1 :requiredDeliveryTime ?requiredDeliveryTime
+	}
+	GRAPH ?id2 {
+		?s :store ?store .
+		?s :minimumRanking ?minimumRanking .
+	}
+}

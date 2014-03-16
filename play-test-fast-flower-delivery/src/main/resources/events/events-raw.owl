@@ -1,0 +1,520 @@
+@prefix : <http://www.semanticweb.org/stefanfzi/ontologies/2014/2/untitled-ontology-10#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/stefanfzi/ontologies/2014/2/untitled-ontology-10> .
+
+<http://www.semanticweb.org/stefanfzi/ontologies/2014/2/untitled-ontology-10> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://dbpedia.org/ontology/city
+
+<http://dbpedia.org/ontology/city> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/addresseeLocation
+
+<http://events.event-processing.org/types/addresseeLocation> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/assignmentCount
+
+<http://events.event-processing.org/types/assignmentCount> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/assignmentMean
+
+<http://events.event-processing.org/types/assignmentMean> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/assignmentSTDV
+
+<http://events.event-processing.org/types/assignmentSTDV> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/committedPickupTime
+
+<http://events.event-processing.org/types/committedPickupTime> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/consistentStrongDriver
+
+<http://events.event-processing.org/types/consistentStrongDriver> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/consistentWeakDriver
+
+<http://events.event-processing.org/types/consistentWeakDriver> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/day
+
+<http://events.event-processing.org/types/day> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/deviation
+
+<http://events.event-processing.org/types/deviation> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/driver
+
+<http://events.event-processing.org/types/driver> rdf:type owl:ObjectProperty ;
+                                                  
+                                                  rdfs:domain <http://events.event-processing.org/types/Driver> ;
+                                                  
+                                                  rdfs:range <http://events.event-processing.org/types/DriverLocation> .
+
+
+
+###  http://events.event-processing.org/types/driverLocation
+
+<http://events.event-processing.org/types/driverLocation> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/driversList
+
+<http://events.event-processing.org/types/driversList> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/endTime
+
+<http://events.event-processing.org/types/endTime> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/idleDriver
+
+<http://events.event-processing.org/types/idleDriver> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/improvingDriver
+
+<http://events.event-processing.org/types/improvingDriver> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/minimumRanking
+
+<http://events.event-processing.org/types/minimumRanking> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/neighborhood
+
+<http://events.event-processing.org/types/neighborhood> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/permanentWeakDriver
+
+<http://events.event-processing.org/types/permanentWeakDriver> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/ranking
+
+<http://events.event-processing.org/types/ranking> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/requestId
+
+<http://events.event-processing.org/types/requestId> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/requiredDeliveryTime
+
+<http://events.event-processing.org/types/requiredDeliveryTime> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/requiredPickupTime
+
+<http://events.event-processing.org/types/requiredPickupTime> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/startTime
+
+<http://events.event-processing.org/types/startTime> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/store
+
+<http://events.event-processing.org/types/store> rdf:type owl:ObjectProperty .
+
+
+
+###  http://events.event-processing.org/types/stream
+
+<http://events.event-processing.org/types/stream> rdf:type owl:ObjectProperty ;
+                                                  
+                                                  rdfs:range <http://events.event-processing.org/types/stream> ;
+                                                  
+                                                  rdfs:domain <http://events.event-processing.org/types/stream> .
+
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://events.event-processing.org/types/endTime
+
+<http://events.event-processing.org/types/endTime> rdf:type owl:DatatypeProperty .
+
+
+
+###  http://events.event-processing.org/types/ranking
+
+<http://events.event-processing.org/types/ranking> rdf:type owl:DatatypeProperty .
+
+
+
+###  http://events.event-processing.org/types/requestId
+
+<http://events.event-processing.org/types/requestId> rdf:type owl:DatatypeProperty .
+
+
+
+###  http://events.event-processing.org/types/requiredDeliveryTime
+
+<http://events.event-processing.org/types/requiredDeliveryTime> rdf:type owl:DatatypeProperty .
+
+
+
+###  http://events.event-processing.org/types/requiredPickupTime
+
+<http://events.event-processing.org/types/requiredPickupTime> rdf:type owl:DatatypeProperty .
+
+
+
+###  http://events.event-processing.org/types/startTime
+
+<http://events.event-processing.org/types/startTime> rdf:type owl:DatatypeProperty .
+
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:DatatypeProperty .
+
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:DatatypeProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://events.event-processing.org/types/Assignment
+
+<http://events.event-processing.org/types/Assignment> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/BidRequest
+
+<http://events.event-processing.org/types/BidRequest> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/DailyAssignments
+
+<http://events.event-processing.org/types/DailyAssignments> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/DailyStatistics
+
+<http://events.event-processing.org/types/DailyStatistics> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/DeliveryAlert
+
+<http://events.event-processing.org/types/DeliveryAlert> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/DeliveryBid
+
+<http://events.event-processing.org/types/DeliveryBid> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/DeliveryBidAlert
+
+<http://events.event-processing.org/types/DeliveryBidAlert> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/DeliveryConfirmation
+
+<http://events.event-processing.org/types/DeliveryConfirmation> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/DeliveryRequest
+
+<http://events.event-processing.org/types/DeliveryRequest> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/DeliveryRequestCancelation
+
+<http://events.event-processing.org/types/DeliveryRequestCancelation> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/DeliveryRequestEnriched
+
+<http://events.event-processing.org/types/DeliveryRequestEnriched> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/Driver
+
+<http://events.event-processing.org/types/Driver> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/DriverLocation
+
+<http://events.event-processing.org/types/DriverLocation> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/DriverRank
+
+<http://events.event-processing.org/types/DriverRank> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/DriverReport
+
+<http://events.event-processing.org/types/DriverReport> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/GPSLocation
+
+<http://events.event-processing.org/types/GPSLocation> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/ImprovementNote
+
+<http://events.event-processing.org/types/ImprovementNote> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/ManualAssignment
+
+<http://events.event-processing.org/types/ManualAssignment> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/ManualAssignmentTimeoutAlert
+
+<http://events.event-processing.org/types/ManualAssignmentTimeoutAlert> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/NoBiddersAlert
+
+<http://events.event-processing.org/types/NoBiddersAlert> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/PickupAlert
+
+<http://events.event-processing.org/types/PickupAlert> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/RankingDecrease
+
+<http://events.event-processing.org/types/RankingDecrease> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/RankingIncrease
+
+<http://events.event-processing.org/types/RankingIncrease> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/RelativePerformance
+
+<http://events.event-processing.org/types/RelativePerformance> rdf:type owl:Class .
+
+
+
+###  http://events.event-processing.org/types/stream
+
+<http://events.event-processing.org/types/stream> rdf:type owl:Class .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://dbpedia.org/resource/Charlottenburg
+
+<http://dbpedia.org/resource/Charlottenburg> rdf:type owl:NamedIndividual .
+
+
+
+###  http://events.event-processing.org/types/AlertsChannel
+
+<http://events.event-processing.org/types/AlertsChannel> rdf:type <http://events.event-processing.org/types/stream> ,
+                                                                  owl:NamedIndividual .
+
+
+
+###  http://events.event-processing.org/types/AssignmentChannel
+
+<http://events.event-processing.org/types/AssignmentChannel> rdf:type <http://events.event-processing.org/types/stream> ,
+                                                                      owl:NamedIndividual .
+
+
+
+###  http://events.event-processing.org/types/AssignmentRequestChannel
+
+<http://events.event-processing.org/types/AssignmentRequestChannel> rdf:type <http://events.event-processing.org/types/stream> ,
+                                                                             owl:NamedIndividual .
+
+
+
+###  http://events.event-processing.org/types/BidRequestChannel
+
+<http://events.event-processing.org/types/BidRequestChannel> rdf:type <http://events.event-processing.org/types/stream> ,
+                                                                      owl:NamedIndividual .
+
+
+
+###  http://events.event-processing.org/types/DeliveryCancellationChannel
+
+<http://events.event-processing.org/types/DeliveryCancellationChannel> rdf:type <http://events.event-processing.org/types/stream> ,
+                                                                                owl:NamedIndividual .
+
+
+
+###  http://events.event-processing.org/types/FlowerShop42
+
+<http://events.event-processing.org/types/FlowerShop42> rdf:type owl:NamedIndividual .
+
+
+
+###  http://events.event-processing.org/types/John
+
+<http://events.event-processing.org/types/John> rdf:type <http://events.event-processing.org/types/Driver>;                                               
+                                                <http://events.event-processing.org/types/ranking> "5"^^xsd:int .
+
+
+
+###  http://events.event-processing.org/types/deliveryRequestEvent
+
+<http://events.event-processing.org/types/deliveryRequestEvent> rdf:type <http://events.event-processing.org/types/DeliveryRequest> ,
+                                                                         owl:NamedIndividual ;
+                                                                
+                                                                <http://events.event-processing.org/types/requestId> 128 ;
+                                                                
+                                                                <http://events.event-processing.org/types/startTime> "2014-03-15T12:42:01.011Z"^^xsd:dateTime ;
+                                                                
+                                                                <http://events.event-processing.org/types/endTime> "2014-03-15T12:42:01.012Z"^^xsd:dateTime ;
+                                                                
+                                                                <http://events.event-processing.org/types/requiredPickupTime> "2014-03-18T12:42:01.011Z"^^xsd:dateTime ;
+                                                                
+                                                                <http://events.event-processing.org/types/requiredDeliveryTime> "2014-03-18T20:00:01.011Z"^^xsd:dateTime ;
+                                                                
+                                                                <http://events.event-processing.org/types/addresseeLocation> <http://dbpedia.org/resource/Charlottenburg> ;
+                                                                
+                                                                <http://events.event-processing.org/types/store> <http://events.event-processing.org/types/FlowerShop42> .
+
+
+
+###  http://events.event-processing.org/types/empty
+
+<http://events.event-processing.org/types/empty> rdf:type owl:NamedIndividual .
+
+
+
+###  http://events.event-processing.org/types/gpsLocationEvent
+
+<http://events.event-processing.org/types/gpsLocationEvent> rdf:type <http://events.event-processing.org/types/GPSLocation> ,
+                                                                     owl:NamedIndividual ;
+                                                            
+                                                            <http://www.w3.org/2003/01/geo/wgs84_pos#long> "13.3"^^xsd:float ;
+                                                            
+                                                            <http://events.event-processing.org/types/startTime> "2014-03-15T12:42:01.011Z"^^xsd:dateTime ;
+                                                            
+                                                            <http://events.event-processing.org/types/endTime> "2020-08-24T12:42:01.011Z"^^xsd:dateTime ;
+                                                            
+                                                            <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "52.5167"^^xsd:float ;
+                                                            
+                                                            <http://events.event-processing.org/types/driver> <http://events.event-processing.org/types/John> .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+

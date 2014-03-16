@@ -1,0 +1,3 @@
+<http://events.event-processing.org/types/Driver> rdf:type owl:Class .
+<http://events.event-processing.org/types/John> rdf:type <http://events.event-processing.org/types/Driver>;                                               
+                                                <http://events.event-processing.org/types/ranking> "5"^^xsd:int .
