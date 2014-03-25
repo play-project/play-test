@@ -1,0 +1,43 @@
+#
+# Title: "Fast Flower Delivery" 1:Assignment phase. 
+# Wait tow minutes for bits and assign the job to the highest ranked driver. (Automatic assignment)
+# 
+
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX geo:     <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX :        <http://events.event-processing.org/types/>
+
+CONSTRUCT {
+	:e rdf:type :Assignment .
+	:e :stream <http://streams.event-processing.org/ids/situationalAlertEvent#stream> .
+	:e :requestId ?requestId .
+	:e :store ?store .
+	:e :addresseeLocation ?addresseeLocation .
+	:e :requiredPickupTime ?requiredPickupTime .
+	:e :requiredDeliveryTime ?requiredDeliveryTime .
+	:e :driver ?driver .
+	}
+WHERE {
+	DELAY(
+		EVENT ?id1 {
+		?e1 rdf:type :BidRequest .
+		?e1 :stream <http://streams.event-processing.org/ids/ffd#stream> .
+		?e1 :requiredPickupTime ?requiredPickupTime .
+		},
+		"PT2M"^^xsd:duration
+		)
+	GRAPH ?id2 {
+		?e2 rdf:type :DeliveryBid .
+		?e2 :stream <http://streams.event-processing.org/ids/ffd#stream> .
+		?e2 :committedPickupTime ?committedPickupTime .
+		?e2 :driver ?driver .
+		FILTER (?requiredPickupTime == ?committedPickupTime)
+		}
+	GRAPH ?id3 {
+		?driver rdf:type :Driver .
+		?driver :ranking ?ranking .
+	}
+	ORDER BY DESC(?ranking)
+	LIMIT 5
+}
