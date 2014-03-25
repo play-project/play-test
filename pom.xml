@@ -16,6 +16,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>play-test-centralized-integration</module>
+		<module>play-test-fast-flower-delivery</module>
 		<module>play-test-srbench-simulator</module>
 		<module>play-test-notifyclient</module>
 		<module>play-test-overall-scenario-simulator</module>
