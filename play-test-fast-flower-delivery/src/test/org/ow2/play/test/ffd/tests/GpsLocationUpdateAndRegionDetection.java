@@ -1,4 +1,4 @@
-package org.ow2.play.test.ffd;
+package org.ow2.play.test.ffd.tests;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -7,15 +7,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import javax.xml.namespace.QName;
 
 import org.etsi.uri.gcm.util.GCM;
 import org.junit.Test;
 import org.objectweb.fractal.adl.ADLException;
-import org.objectweb.fractal.api.Component;
 import org.objectweb.fractal.api.NoSuchInterfaceException;
 import org.objectweb.fractal.api.control.IllegalLifeCycleException;
 import org.objectweb.proactive.ActiveObjectCreationException;
@@ -25,99 +20,70 @@ import org.ontoware.rdf2go.exception.ModelRuntimeException;
 import org.ontoware.rdf2go.model.Model;
 import org.ontoware.rdf2go.model.ModelSet;
 import org.ontoware.rdf2go.model.Syntax;
+import org.ow2.play.test.ffd.Main;
+import org.ow2.play.test.ffd.SimplePublishApiSubscriber;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import eu.play_project.dcep.SubscriberPerformanceTest;
 import eu.play_project.dcep.distributedetalis.api.DistributedEtalisTestApi;
 import eu.play_project.dcep.distributedetalis.utils.EventCloudHelpers;
 import eu.play_project.dcep.distributedetalis.utils.ProActiveHelpers;
-import eu.play_project.dcep.tests.ScenarioIntelligentTransportTest;
-import eu.play_project.dcep.tests.ScenarioMyGreenServicesTest;
 import eu.play_project.play_commons.eventtypes.EventHelpers;
 import eu.play_project.play_platformservices.api.QueryDispatchApi;
 import eu.play_project.play_platformservices.api.QueryDispatchException;
 
+public class GpsLocationUpdateAndRegionDetection extends ScenarioAbstractTest {
+	
+private final Logger logger = LoggerFactory.getLogger(GpsLocationUpdateAndRegionDetection.class);
+	
+	@Test
+	public void runTest() throws IOException, QueryDispatchException, IllegalLifeCycleException, NoSuchInterfaceException, ADLException {
 
-public class Main {
-	private final static Logger logger = LoggerFactory.getLogger(org.ow2.play.test.ffd.Main.class);
-	public static QueryDispatchApi queryDispatchApi;
-	public static DistributedEtalisTestApi testApi;
-	boolean start = false;
-	static Component root;
-	public static boolean test;
+		String gegionDetectionQuery;
+		InstantiatePlayPlatform();
 
+		// Get query.
+		gegionDetectionQuery = getSparqlQueries("queries/1-BidPhase_gps-region-detection.eprq");
+		System.out.println("SPARQL query:\n" + gegionDetectionQuery);
 
-  public static void main(String[] args) throws InterruptedException, QueryDispatchException, IllegalLifeCycleException, NoSuchInterfaceException, ADLException, ModelRuntimeException, IOException {
+		// Compile query
+		String patternId = queryDispatchApi.registerQuery("http://test.example.com", gegionDetectionQuery);
 
-			String gegionDetectionQuery;
-			InstantiatePlayPlatform();
-
-			// Get query.
-			gegionDetectionQuery = getSparqlQueries("queries/1-BidPhase_gps-region-detection.eprq");
-			System.out.println("SPARQL query:\n" + gegionDetectionQuery);
-
-			// Compile query
-			String patternId = queryDispatchApi.registerQuery("http://test.example.com", gegionDetectionQuery);
-
-			
-			//Subscribe to get complex events.
-			SimplePublishApiSubscriber subscriber = null;
-			try {
-				subscriber = PAActiveObject.newActive(SimplePublishApiSubscriber.class, new Object[] {});
-			} catch (ActiveObjectCreationException e) {
-				e.printStackTrace();
-			} catch (NodeException e) {
-				e.printStackTrace();
-			}
-			testApi.attach(subscriber);
+		
+		//Subscribe to get complex events.
+		SimplePublishApiSubscriber subscriber = null;
+		try {
+			subscriber = PAActiveObject.newActive(SimplePublishApiSubscriber.class, new Object[] {});
+		} catch (ActiveObjectCreationException e) {
+			e.printStackTrace();
+		} catch (NodeException e) {
+			e.printStackTrace();
+		}
+		testApi.attach(subscriber);
 
 
-			logger.info("Publish events");
-			testApi.publish(EventCloudHelpers.toCompoundEvent(loadEvent("events/FDS_gps-location.trig", Syntax.Trig)));
+		logger.info("Publish events");
+		testApi.publish(EventCloudHelpers.toCompoundEvent(loadEvent("events/FDS_gps-location.trig", Syntax.Trig)));
 
-			// Wait
-			delay();
-			System.out.println(subscriber.getComplexEvents());
-			//assertEquals("We expect exactly one complex event as a result.", 1, subscriber.getComplexEvents().size());
+		// Wait
+		delay();
+		System.out.println(subscriber.getComplexEvents());
+		//assertEquals("We expect exactly one complex event as a result.", 1, subscriber.getComplexEvents().size());
+}
 
-
-//			
-//			// Test if result is OK
-//			assertTrue("Number of complex events wrong "
-//					+ subscriber.getComplexEvents().size(), subscriber
-//					.getComplexEvents().size() == 16);
-//			
-//			
-//			// Stop and terminate GCM Components
-//			try {
-//				GCM.getGCMLifeCycleController(root).stopFc();
-//				// Terminate all subcomponents.
-//				 for(Component subcomponent : GCM.getContentController(root).getFcSubComponents()){
-//					GCM.getGCMLifeCycleController(subcomponent).terminateGCMComponent();
-//				 }
-//
-//				
-//			} catch (IllegalLifeCycleException e) {
-//				e.printStackTrace();
-//			} catch (NoSuchInterfaceException e) {
-//				e.printStackTrace();
-//			}
-	}
-  
-  public static void InstantiatePlayPlatform()
+	public static void InstantiatePlayPlatform()
 			throws IllegalLifeCycleException, NoSuchInterfaceException,
 			ADLException {
-
+	
 		root = ProActiveHelpers.newComponent("PsDcepComponent");
 		GCM.getGCMLifeCycleController(root).startFc();
-
+	
 		queryDispatchApi = ((eu.play_project.play_platformservices.api.QueryDispatchApi) root
 				.getFcInterface(QueryDispatchApi.class.getSimpleName()));
 		testApi = ((eu.play_project.dcep.distributedetalis.api.DistributedEtalisTestApi) root
 				.getFcInterface(DistributedEtalisTestApi.class.getSimpleName()));
 	}
-	
+
 	private static String getSparqlQueries(String queryFile){
 		try {
 			InputStream is = Main.class.getClassLoader().getResourceAsStream(queryFile);
@@ -132,9 +98,9 @@ public class Main {
 			//System.out.println(sb.toString());
 			br.close();
 			is.close();
-
+	
 			return sb.toString();
-
+	
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -144,7 +110,7 @@ public class Main {
 	
 	private static void delay(){
 		try {
-			Thread.sleep(500);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -155,5 +121,5 @@ public class Main {
 		event.readFrom(org.ow2.play.test.ffd.Main.class.getClassLoader().getResourceAsStream(rdfFile), rdfSyntax);
 		return event.getModels().next();
 	}
-	  
-  }
+  
+}
