@@ -23,11 +23,13 @@ WHERE {
 		?e1	geo:lat ?latitude.
 		?e1	geo:long ?longitude.
 		}
-	GRAPH ?id2 {
-		?quarter dbp:type "Quarter"@en.
-		?quarter dbo:city <http://dbpedia.org/resource/Berlin>.
-		?quarter geo:lat ?lat .
-		?quarter geo:long ?long .
-		FILTER (?long > ?longitude - 0.1 && ?long < ?longitude + 0.1 && ?lat  > ?latitude  - 0.1 && ?lat  < ?latitude  + 0.1) 
-		}
+	HISTORIC <http://app.event-processing.org/4store/test#stream> {
+		GRAPH ?id2 {
+			?quarter dbp:type "Quarter"@en.
+			?quarter dbo:city <http://dbpedia.org/resource/Berlin>.
+			?quarter geo:lat ?lat .
+			?quarter geo:long ?long .
+			FILTER (?long > ?longitude - 0.1 && ?long < ?longitude + 0.1 && ?lat  > ?latitude  - 0.1 && ?lat  < ?latitude  + 0.1) 
+			}
+	}
 }
