@@ -1,3 +1,5 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
 <http://events.event-processing.org/types/Driver> rdf:type owl:Class .
 <http://events.event-processing.org/types/John> rdf:type <http://events.event-processing.org/types/Driver>;                                               
                                                 <http://events.event-processing.org/types/ranking> "5"^^xsd:int .
