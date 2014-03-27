@@ -43,13 +43,27 @@ public class HistoricDataTest {
 
 		// Query data from model
 		//Query query = QueryFactory.create("SELECT * WHERE {?S ?P ?O}");
-		Query query = QueryFactory.create(""
-				+ "SELECT *"
-				+ " WHERE { "
-					+ "GRAPH ?id{?S ?P ?O} "
-					+ "FILTER (?id = ?id2) "
-					+ "VALUES (?id2){(<http://dbspedia.org/>)} "
-				+ "}");
+		String queryString ="" +
+				"PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> "+
+				"PREFIX dbo: <http://dbpedia.org/ontology/> "+
+				"PREFIX dbp: <http://dbpedia.org/property/> "+
+				"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "+
+				"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "+
+				""+
+				"SELECT DISTINCT ?longitude ?latitude ?quarter "+
+				" WHERE { "+
+					" GRAPH ?id2 {" +
+						" ?quarter dbp:type \"Quarter\"@en ."+
+						" ?quarter dbo:city <http://dbpedia.org/resource/Berlin> ."+
+						" ?quarter geo:lat ?lat ."+
+						" ?quarter geo:long ?long"+
+					" }"+
+					" FILTER ( ( ( ( ?long > ( ?longitude - 0.1 ) ) && ( ?long < ( ?longitude + 0.1 ) ) ) && ( ?lat > ( ?latitude - 0.1 ) ) ) && ( ?lat < ( ?latitude + 0.1 ) ) )"+
+					" VALUES ( ?longitude ?latitude ) {"+
+					" ( 13.3 52.5167 )"+
+					" }"+
+				" } ";
+		Query query = QueryFactory.create(queryString);
 
 		Dataset jena = (Dataset) rdf.getUnderlyingModelSetImplementation();
 		
