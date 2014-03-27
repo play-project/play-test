@@ -64,7 +64,10 @@
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix yago:    <http://dbpedia.org/class/yago/> .
 
-<http://dbpedia.org/berlin-quarters.ttl>
+
+<http://dbpedia.org/> {
+
+<http://dbpedia.org/>
       rdf:type owl:Ontology .
 
 dbpedia:Adlershof
@@ -5334,3 +5337,6 @@ dbpedia:Wittenau
       foaf:isPrimaryTopicOf
               <http://en.wikipedia.org/wiki/Zehlendorf_(Berlin)> ;
       foaf:name "Zehlendorf"@en .
+      
+}
+
