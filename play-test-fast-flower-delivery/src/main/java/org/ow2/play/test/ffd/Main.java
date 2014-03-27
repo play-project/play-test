@@ -1,19 +1,10 @@
 package org.ow2.play.test.ffd;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import javax.xml.namespace.QName;
-
 import org.etsi.uri.gcm.util.GCM;
-import org.junit.Test;
 import org.objectweb.fractal.adl.ADLException;
 import org.objectweb.fractal.api.Component;
 import org.objectweb.fractal.api.NoSuchInterfaceException;
@@ -28,12 +19,9 @@ import org.ontoware.rdf2go.model.Syntax;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import eu.play_project.dcep.SubscriberPerformanceTest;
 import eu.play_project.dcep.distributedetalis.api.DistributedEtalisTestApi;
 import eu.play_project.dcep.distributedetalis.utils.EventCloudHelpers;
 import eu.play_project.dcep.distributedetalis.utils.ProActiveHelpers;
-import eu.play_project.dcep.tests.ScenarioIntelligentTransportTest;
-import eu.play_project.dcep.tests.ScenarioMyGreenServicesTest;
 import eu.play_project.play_commons.eventtypes.EventHelpers;
 import eu.play_project.play_platformservices.api.QueryDispatchApi;
 import eu.play_project.play_platformservices.api.QueryDispatchException;

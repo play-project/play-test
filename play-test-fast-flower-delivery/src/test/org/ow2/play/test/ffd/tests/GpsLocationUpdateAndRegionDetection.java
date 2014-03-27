@@ -1,8 +1,5 @@
 package org.ow2.play.test.ffd.tests;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -49,7 +46,6 @@ private final Logger logger = LoggerFactory.getLogger(GpsLocationUpdateAndRegion
 		// Compile query
 		String patternId = queryDispatchApi.registerQuery("http://test.example.com", gegionDetectionQuery);
 
-		
 		//Subscribe to get complex events.
 		SimplePublishApiSubscriber subscriber = null;
 		try {
@@ -60,7 +56,6 @@ private final Logger logger = LoggerFactory.getLogger(GpsLocationUpdateAndRegion
 			e.printStackTrace();
 		}
 		testApi.attach(subscriber);
-
 
 		logger.info("Publish events");
 		testApi.publish(EventCloudHelpers.toCompoundEvent(loadEvent("events/FDS_gps-location.trig", Syntax.Trig)));

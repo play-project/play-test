@@ -1,6 +1,0 @@
-@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix owl:     <http://www.w3.org/2002/07/owl#> .
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
-
-<http://events.event-processing.org/types/FlowerShop42> rdf:type owl:NamedIndividual ;
-                                                        <http://streams.event-processing.org/types/minimumRanking> "2"^^xsd:int .
