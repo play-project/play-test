@@ -29,7 +29,8 @@ WHERE {
 			?quarter dbo:city <http://dbpedia.org/resource/Berlin>.
 			?quarter geo:lat ?lat .
 			?quarter geo:long ?long .
-			FILTER (?long > ?longitude - 0.1 && ?long < ?longitude + 0.1 && ?lat  > ?latitude  - 0.1 && ?lat  < ?latitude  + 0.1) 
+			
+			FILTER (?long > ?longitude - 0.03 && ?long < ?longitude + 0.03 && ?lat  > ?latitude  - 0.03 && ?lat  < ?latitude  + 0.03) 
 			}
 	}
 }

@@ -50,7 +50,7 @@ public class HistoricDataTest {
 				"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "+
 				"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "+
 				""+
-				"SELECT DISTINCT ?longitude ?latitude ?quarter "+
+				"SELECT DISTINCT ?quarter "+
 				" WHERE { "+
 					" GRAPH ?id2 {" +
 						" ?quarter dbp:type \"Quarter\"@en ."+
@@ -58,7 +58,7 @@ public class HistoricDataTest {
 						" ?quarter geo:lat ?lat ."+
 						" ?quarter geo:long ?long"+
 					" }"+
-					" FILTER ( ( ( ( ?long > ( ?longitude - 0.1 ) ) && ( ?long < ( ?longitude + 0.1 ) ) ) && ( ?lat > ( ?latitude - 0.1 ) ) ) && ( ?lat < ( ?latitude + 0.1 ) ) )"+
+					" FILTER (((( ?long > ( ?longitude - 0.03 )) && ( ?long < ( ?longitude + 0.03 ))) && ( ?lat > ( ?latitude - 0.03 ))) && ( ?lat < ( ?latitude + 0.03 )))"+
 					" VALUES ( ?longitude ?latitude ) {"+
 					" ( 13.3 52.5167 )"+
 					" }"+
@@ -79,8 +79,14 @@ public class HistoricDataTest {
 		} finally {
 			qexec.close();
 		}
-		
-		System.out.println(result.getResult().next());
+		String[] expectedResults = {"http://dbpedia.org/resource/Charlottenburg-Nord", "http://dbpedia.org/resource/Charlottenburg", "http://dbpedia.org/resource/Halensee", "http://dbpedia.org/resource/Westend_(Berlin)"};
+		int expectedResultsIndex = 0;
+		while(result.getResult().hasNext()){
+			//System.out.println(result.getResult().next().get("quarter").equals(expectedResults[expectedResultsIndex]));
+			System.out.println(result.getResult().next().get("quarter"));
+			//expectedResultsIndex++;
+		}
+
 //		assertTrue(result.getResult().next().get("O").toString()
 //				.equals("Roland St\u00FChmer"));
 	}

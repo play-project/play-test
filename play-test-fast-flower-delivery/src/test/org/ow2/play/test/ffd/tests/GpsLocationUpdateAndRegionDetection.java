@@ -1,5 +1,7 @@
 package org.ow2.play.test.ffd.tests;
 
+import static org.junit.Assert.*;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -62,9 +64,11 @@ private final Logger logger = LoggerFactory.getLogger(GpsLocationUpdateAndRegion
 
 		// Wait
 		delay();
+		
 		System.out.println(subscriber.getComplexEvents());
-		//assertEquals("We expect exactly one complex event as a result.", 1, subscriber.getComplexEvents().size());
-}
+		assertEquals("We expect exactly one complex event as a result.", 1, subscriber.getComplexEvents().size());
+		assertEquals("We expect exactly 12 triples in complex event.", 12, subscriber.getComplexEvents().get(0).getTriples().size());
+	}
 
 	public static void InstantiatePlayPlatform()
 			throws IllegalLifeCycleException, NoSuchInterfaceException,
