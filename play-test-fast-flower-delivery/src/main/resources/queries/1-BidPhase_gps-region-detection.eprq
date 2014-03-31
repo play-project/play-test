@@ -11,7 +11,7 @@ PREFIX :        <http://events.event-processing.org/types/>
 
 CONSTRUCT {
 	:e rdf:type :DriverLocation.
-	:e :stream <http://streams.event-processing.org/ids/locationChannel#stream> .
+	:e :stream <http://event-processing.org/local/complex#stream> .
 	:e :driver ?name .
 	:e :location ?quarter
 	}
@@ -23,7 +23,7 @@ WHERE {
 		?e1	geo:lat ?latitude.
 		?e1	geo:long ?longitude.
 		}
-	HISTORIC <http://app.event-processing.org/4store/test#stream> {
+	HISTORIC <http://event-processing.org/local/historic#stream> {
 		GRAPH ?id2 {
 			?quarter dbp:type "Quarter"@en.
 			?quarter dbo:city <http://dbpedia.org/resource/Berlin>.

@@ -38,15 +38,15 @@ public class Main {
 
   public static void main(String[] args) throws InterruptedException, QueryDispatchException, IllegalLifeCycleException, NoSuchInterfaceException, ADLException, ModelRuntimeException, IOException {
 
-			String gegionDetectionQuery;
+			String regionDetectionQuery;
 			InstantiatePlayPlatform();
 
 			// Get query.
-			gegionDetectionQuery = getSparqlQueries("queries/1-BidPhase_gps-region-detection.eprq");
-			System.out.println("SPARQL query:\n" + gegionDetectionQuery);
+			regionDetectionQuery = getSparqlQueries("queries/1-BidPhase_gps-region-detection.eprq");
+			System.out.println("SPARQL query:\n" + regionDetectionQuery);
 
 			// Compile query
-			String patternId = queryDispatchApi.registerQuery("http://test.example.com", gegionDetectionQuery);
+			String patternId = queryDispatchApi.registerQuery("http://test.example.com", regionDetectionQuery);
 
 			
 			//Subscribe to get complex events.
@@ -62,7 +62,7 @@ public class Main {
 
 
 			logger.info("Publish events");
-			testApi.publish(EventCloudHelpers.toCompoundEvent(loadEvent("events/FDS_gps-location.trig", Syntax.Trig)));
+			testApi.publish(EventCloudHelpers.toCompoundEvent(loadEvent("events/FDS_gps-location.trig", Syntax.forFileName("FDS_gps-location.trig"))));
 
 			// Wait
 			delay();
