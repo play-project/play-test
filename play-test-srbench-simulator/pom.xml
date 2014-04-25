@@ -9,9 +9,9 @@
 		<groupId>org.ow2.play</groupId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>play-test-overall-scenario-simulator</artifactId>
+	<artifactId>play-test-srbench-simulator</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<name>play-test-overall-scenario-simulator</name>
+	<name>play-test-srbench-simulator</name>
 
 	<dependencies>
 		<dependency>
