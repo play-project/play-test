@@ -1,6 +1,5 @@
 package org.ow2.play.test;
 
-import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
@@ -97,7 +96,7 @@ public class TweetSimulator implements Iterator<Model> {
 			}
 			
 			// check on ascii level:
-			oldMessage.getBytes(StandardCharsets.US_ASCII);
+			//oldMessage.getBytes(StandardCharsets.US_ASCII);
 
 			
 			//String newMessage =
@@ -105,6 +104,7 @@ public class TweetSimulator implements Iterator<Model> {
 			//model.removeStatements(tweetMessage); // TODO enable for permanent change on disk
 			//model.addStatement(eventSubject, siocContent, newMessage);
 		}
+		
 		return model;
 	}
 
