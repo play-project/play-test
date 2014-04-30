@@ -21,20 +21,10 @@
 				<filtering>false</filtering>
 			</resource>
 			<resource>
-				<directory>src/main/resources/adl</directory>
+				<directory>src/main/adl</directory>
 				<filtering>false</filtering>
 			</resource>
 		</resources>
-		<testResources>
-			<testResource>
-				<directory>src/main/resources</directory>
-				<filtering>false</filtering>
-			</testResource>
-			<testResource>
-				<directory>src/main/resources/adl</directory>
-				<filtering>false</filtering>
-			</testResource>
-        </testResources>
 	</build>
 	
 	<dependencies>
