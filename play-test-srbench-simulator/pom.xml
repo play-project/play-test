@@ -83,52 +83,6 @@
 					<skip>true</skip>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>appassembler-maven-plugin</artifactId>
-				<version>1.4</version>
-				<configuration>
-					<repositoryLayout>flat</repositoryLayout>
-					<includeConfigurationDirectoryInClasspath>true</includeConfigurationDirectoryInClasspath>
-					<daemons>
-						<daemon>
-							<id>overall-simulator</id>
-							<mainClass>org.ow2.play.test.OverallSimulator</mainClass>
-							<platforms>
-								<platform>booter-unix</platform>
-								<platform>booter-windows</platform>
-							</platforms>
-						</daemon>
-					</daemons>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>generate-daemons</goal>
-							<goal>create-repository</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.4</version>
-				<configuration>
-					<descriptors>
-						<descriptor>src/main/assembly/default.xml</descriptor>
-					</descriptors>
-				</configuration>
-				<executions>
-					<execution>
-						<id>assembly</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
 </project>
