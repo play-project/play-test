@@ -487,9 +487,9 @@
 
 
 
-###  http://events.event-processing.org/types/deliveryRequestEvent
+###  http://events.event-processing.org/ids/deliveryRequestEvent
 
-<http://events.event-processing.org/types/deliveryRequestEvent> rdf:type <http://events.event-processing.org/types/DeliveryRequest> ,
+<http://events.event-processing.org/ids/deliveryRequestEvent> rdf:type <http://events.event-processing.org/types/DeliveryRequest> ,
                                                                          owl:NamedIndividual ;
                                                                 
                                                                 <http://events.event-processing.org/types/requestId> 128 ;
@@ -514,9 +514,9 @@
 
 
 
-###  http://events.event-processing.org/types/gpsLocationEvent
+###  http://events.event-processing.org/ids/gpsLocationEvent
 
-<http://events.event-processing.org/types/gpsLocationEvent> rdf:type <http://events.event-processing.org/types/GPSLocation> ,
+<http://events.event-processing.org/ids/gpsLocationEvent> rdf:type <http://events.event-processing.org/types/GPSLocation> ,
                                                                      owl:NamedIndividual ;
                                                             
                                                             <http://www.w3.org/2003/01/geo/wgs84_pos#long> "13.3"^^xsd:float ;
