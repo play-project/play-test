@@ -18,7 +18,7 @@ import org.ontoware.rdf2go.model.Syntax;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import eu.play_project.dcep.distributedetalis.api.DistributedEtalisTestApi;
+import eu.play_project.dcep.api.DcepTestApi;
 import eu.play_project.dcep.distributedetalis.utils.ProActiveHelpers;
 import eu.play_project.play_commons.eventtypes.EventHelpers;
 import eu.play_project.play_platformservices.api.QueryDispatchApi;
@@ -31,7 +31,7 @@ import eu.play_project.play_platformservices.api.QueryDispatchApi;
  */
 public class ScenarioAbstractTest {
 	public static QueryDispatchApi queryDispatchApi;
-	public static DistributedEtalisTestApi testApi;
+	public static DcepTestApi testApi;
 	boolean start = false;
 	public static Component root;
 	public static boolean test;
@@ -46,7 +46,7 @@ public class ScenarioAbstractTest {
 		GCM.getGCMLifeCycleController(root).startFc();
 
 		queryDispatchApi = (QueryDispatchApi) root.getFcInterface(QueryDispatchApi.class.getSimpleName());
-		testApi = (DistributedEtalisTestApi) root.getFcInterface(DistributedEtalisTestApi.class.getSimpleName());
+		testApi = (DcepTestApi) root.getFcInterface(DcepTestApi.class.getSimpleName());
 		
 		try {
 			Thread.sleep(10000);

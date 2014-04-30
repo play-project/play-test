@@ -1,6 +1,6 @@
 package org.ow2.play.test.ffd.tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,7 +24,7 @@ import org.ow2.play.test.ffd.SimplePublishApiSubscriber;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import eu.play_project.dcep.distributedetalis.api.DistributedEtalisTestApi;
+import eu.play_project.dcep.api.DcepTestApi;
 import eu.play_project.dcep.distributedetalis.utils.EventCloudHelpers;
 import eu.play_project.dcep.distributedetalis.utils.ProActiveHelpers;
 import eu.play_project.play_commons.eventtypes.EventHelpers;
@@ -79,8 +79,7 @@ private final Logger logger = LoggerFactory.getLogger(GpsLocationUpdateAndRegion
 	
 		queryDispatchApi = ((eu.play_project.play_platformservices.api.QueryDispatchApi) root
 				.getFcInterface(QueryDispatchApi.class.getSimpleName()));
-		testApi = ((eu.play_project.dcep.distributedetalis.api.DistributedEtalisTestApi) root
-				.getFcInterface(DistributedEtalisTestApi.class.getSimpleName()));
+		testApi = ((DcepTestApi) root.getFcInterface(DcepTestApi.class.getSimpleName()));
 	}
 
 	private static String getSparqlQueries(String queryFile){

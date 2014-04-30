@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+
 import org.etsi.uri.gcm.util.GCM;
 import org.objectweb.fractal.adl.ADLException;
 import org.objectweb.fractal.api.Component;
@@ -19,7 +20,7 @@ import org.ontoware.rdf2go.model.Syntax;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import eu.play_project.dcep.distributedetalis.api.DistributedEtalisTestApi;
+import eu.play_project.dcep.api.DcepTestApi;
 import eu.play_project.dcep.distributedetalis.utils.EventCloudHelpers;
 import eu.play_project.dcep.distributedetalis.utils.ProActiveHelpers;
 import eu.play_project.play_commons.eventtypes.EventHelpers;
@@ -30,7 +31,7 @@ import eu.play_project.play_platformservices.api.QueryDispatchException;
 public class Main {
 	private final static Logger logger = LoggerFactory.getLogger(org.ow2.play.test.ffd.Main.class);
 	public static QueryDispatchApi queryDispatchApi;
-	public static DistributedEtalisTestApi testApi;
+	public static DcepTestApi testApi;
 	boolean start = false;
 	static Component root;
 	public static boolean test;
@@ -70,13 +71,13 @@ public class Main {
 			//assertEquals("We expect exactly one complex event as a result.", 1, subscriber.getComplexEvents().size());
 
 
-//			
+//
 //			// Test if result is OK
 //			assertTrue("Number of complex events wrong "
 //					+ subscriber.getComplexEvents().size(), subscriber
 //					.getComplexEvents().size() == 16);
-//			
-//			
+//
+//
 //			// Stop and terminate GCM Components
 //			try {
 //				GCM.getGCMLifeCycleController(root).stopFc();
@@ -85,7 +86,7 @@ public class Main {
 //					GCM.getGCMLifeCycleController(subcomponent).terminateGCMComponent();
 //				 }
 //
-//				
+//
 //			} catch (IllegalLifeCycleException e) {
 //				e.printStackTrace();
 //			} catch (NoSuchInterfaceException e) {
@@ -102,8 +103,7 @@ public class Main {
 
 		queryDispatchApi = ((eu.play_project.play_platformservices.api.QueryDispatchApi) root
 				.getFcInterface(QueryDispatchApi.class.getSimpleName()));
-		testApi = ((eu.play_project.dcep.distributedetalis.api.DistributedEtalisTestApi) root
-				.getFcInterface(DistributedEtalisTestApi.class.getSimpleName()));
+		testApi = ((DcepTestApi) root .getFcInterface(DcepTestApi.class.getSimpleName()));
 	}
 	
 	private static String getSparqlQueries(String queryFile){
