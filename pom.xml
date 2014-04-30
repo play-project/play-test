@@ -22,9 +22,6 @@
 		<module>play-test-notifyclient</module>
 		<module>play-test-overall-scenario-simulator</module>
 	</modules>
-	<build>
-		<defaultGoal>install</defaultGoal>
-	</build>
 
 	<properties>
 		<play.commons.version>1.2-SNAPSHOT</play.commons.version>
@@ -56,6 +53,21 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- Do not deploy to maven repo, it is very big. :stuehmer -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<configuration>
+						<skip>true</skip>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 
 	<repositories>
 		<!-- Repository to retrieve snapshots of the parent  -->
