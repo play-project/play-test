@@ -31,12 +31,12 @@ import eu.play_project.play_commons.eventtypes.EventHelpers;
 import eu.play_project.play_platformservices.api.QueryDispatchApi;
 import eu.play_project.play_platformservices.api.QueryDispatchException;
 
-public class GpsLocationUpdateAndRegionDetection extends ScenarioAbstractTest {
+public class GpsLocationUpdateAndRegionDetectionTest extends ScenarioAbstractTest {
 	
-private final Logger logger = LoggerFactory.getLogger(GpsLocationUpdateAndRegionDetection.class);
+private final Logger logger = LoggerFactory.getLogger(GpsLocationUpdateAndRegionDetectionTest.class);
 	
 	@Test
-	public void runTest() throws IOException, QueryDispatchException, IllegalLifeCycleException, NoSuchInterfaceException, ADLException {
+	public void testGps() throws IOException, QueryDispatchException, IllegalLifeCycleException, NoSuchInterfaceException, ADLException {
 
 		String gegionDetectionQuery;
 		InstantiatePlayPlatform();
@@ -46,7 +46,7 @@ private final Logger logger = LoggerFactory.getLogger(GpsLocationUpdateAndRegion
 		System.out.println("SPARQL query:\n" + gegionDetectionQuery);
 
 		// Compile query
-		String patternId = queryDispatchApi.registerQuery("http://test.example.com", gegionDetectionQuery);
+		queryDispatchApi.registerQuery("http://test.example.com", gegionDetectionQuery);
 
 		//Subscribe to get complex events.
 		SimplePublishApiSubscriber subscriber = null;
